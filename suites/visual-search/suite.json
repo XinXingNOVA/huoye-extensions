@@ -1,0 +1,466 @@
+{
+  "formatVersion": 1,
+  "id": "visual-search",
+  "title": "灵图与灵眸",
+  "version": "0.1.0",
+  "description": "把以图搜图、中英文自然语言文搜图、视觉去重、实况文本 OCR 与一键透明抠图合在一套，按需挂载或热切换本地视觉引擎。",
+  "packages": [
+    "packages/visual-search.hyplugin",
+    "packages/embed-apple.hyplugin",
+    "packages/embed-classic.hyplugin",
+    "packages/embed-clip.hyplugin",
+    "packages/vision-studio.hyplugin",
+    "packages/vision-apple.hyplugin",
+    "packages/pureboard.hyplugin",
+    "packages/palette.hyplugin",
+    "packages/annotate.hyplugin",
+    "packages/collection.hyplugin",
+    "packages/tags.hyplugin",
+    "packages/tag-groups.hyplugin",
+    "packages/rating.hyplugin",
+    "packages/note.hyplugin",
+    "packages/table.hyplugin",
+    "packages/vision-tesseract.hyplugin"
+  ],
+  "presets": [
+    {
+      "id": "visual-search",
+      "recommendedTheme": "silver-gelatin",
+      "title": "灵图检索 · 以图/文搜图与去重",
+      "description": "以图搜图、外图拖入直搜、相似灵感侧栏与重复连拍清理；配 Chinese-CLIP 运行包可开启中英文文搜图。",
+      "plugins": [
+        "preview",
+        "image",
+        "visual-search",
+        "embed-apple",
+        "pureboard",
+        "palette",
+        "annotate",
+        "collection",
+        "tags",
+        "tag-groups",
+        "rating",
+        "note",
+        "table"
+      ],
+      "layout": {
+        "version": 1,
+        "root": {
+          "type": "group",
+          "id": "main"
+        },
+        "primary": "main",
+        "panels": {
+          "sidebar": true,
+          "inspector": true
+        },
+        "panelSizes": {
+          "sidebar": 260,
+          "inspector": 330
+        },
+        "sidebars": {
+          "version": 4,
+          "containers": [
+            {
+              "id": "host.navigation",
+              "side": "left",
+              "type": "tabs",
+              "views": [
+                "host.navigation"
+              ],
+              "active": "host.navigation"
+            },
+            {
+              "id": "host.context",
+              "side": "right",
+              "type": "context",
+              "views": [],
+              "active": "",
+              "contexts": {
+                "collection": {
+                  "tools": [
+                    "host.filters",
+                    "visual-search.similar-panel"
+                  ],
+                  "active": "visual-search.similar-panel"
+                }
+              }
+            },
+            {
+              "id": "host.inspector",
+              "side": "right",
+              "type": "tabs",
+              "views": [
+                "host.inspector"
+              ],
+              "active": "host.inspector"
+            }
+          ],
+          "selected": {
+            "left": "host.navigation",
+            "right": "host.context"
+          },
+          "hidden": [],
+          "weights": {
+            "host.navigation": 1,
+            "host.context": 0.54,
+            "host.inspector": 0.46
+          }
+        },
+        "contents": {
+          "main": {
+            "items": [
+              {
+                "kind": "page",
+                "type": "collection",
+                "target": {
+                  "presetId": "all"
+                },
+                "presentation": {
+                  "layout": "masonry",
+                  "options": {},
+                  "zoom": 240
+                }
+              },
+              {
+                "kind": "page",
+                "type": "collection",
+                "target": {
+                  "presetId": "visual-search.indexed"
+                },
+                "presentation": {
+                  "layout": "masonry",
+                  "options": {},
+                  "zoom": 220
+                }
+              }
+            ],
+            "active": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "vision-studio",
+      "recommendedTheme": "silver-gelatin",
+      "title": "灵眸视觉 · 实况 OCR 与一键抠图",
+      "description": "识别图片文字写入全局搜索、支持直接划选复制，一键抠出透明主体并无损导出。",
+      "plugins": [
+        "preview",
+        "image",
+        "text",
+        "vision-studio",
+        "vision-apple",
+        "pureboard",
+        "palette",
+        "annotate",
+        "collection",
+        "tags",
+        "tag-groups",
+        "rating",
+        "note",
+        "table"
+      ],
+      "layout": {
+        "version": 1,
+        "root": {
+          "type": "group",
+          "id": "main"
+        },
+        "primary": "main",
+        "panels": {
+          "sidebar": true,
+          "inspector": true
+        },
+        "panelSizes": {
+          "sidebar": 260,
+          "inspector": 330
+        },
+        "sidebars": {
+          "version": 4,
+          "containers": [
+            {
+              "id": "host.navigation",
+              "side": "left",
+              "type": "tabs",
+              "views": [
+                "host.navigation"
+              ],
+              "active": "host.navigation"
+            },
+            {
+              "id": "host.context",
+              "side": "right",
+              "type": "context",
+              "views": [],
+              "active": "",
+              "contexts": {
+                "collection": {
+                  "tools": [
+                    "host.filters"
+                  ],
+                  "active": "host.filters"
+                }
+              }
+            },
+            {
+              "id": "host.inspector",
+              "side": "right",
+              "type": "tabs",
+              "views": [
+                "host.inspector"
+              ],
+              "active": "host.inspector"
+            }
+          ],
+          "selected": {
+            "left": "host.navigation",
+            "right": "host.context"
+          },
+          "hidden": [],
+          "weights": {
+            "host.navigation": 1,
+            "host.context": 0.52,
+            "host.inspector": 0.48
+          }
+        },
+        "contents": {
+          "main": {
+            "items": [
+              {
+                "kind": "page",
+                "type": "collection",
+                "target": {
+                  "presetId": "all"
+                },
+                "presentation": {
+                  "layout": "masonry",
+                  "options": {},
+                  "zoom": 240
+                }
+              },
+              {
+                "kind": "page",
+                "type": "collection",
+                "target": {
+                  "presetId": "vision-studio.with-text"
+                },
+                "presentation": {
+                  "layout": "masonry",
+                  "options": {},
+                  "zoom": 240
+                }
+              },
+              {
+                "kind": "page",
+                "type": "collection",
+                "target": {
+                  "presetId": "vision-studio.cutouts"
+                },
+                "presentation": {
+                  "layout": "masonry",
+                  "options": {},
+                  "zoom": 220
+                }
+              }
+            ],
+            "active": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "visual-ai-studio",
+      "recommendedTheme": "silver-gelatin",
+      "title": "视觉全能台 · 搜图 + 识字 + 抠图",
+      "description": "同时开启视觉检索、实况 OCR、一键抠图与灵感参考板，一套覆盖全部看图需求。",
+      "plugins": [
+        "preview",
+        "image",
+        "text",
+        "visual-search",
+        "embed-apple",
+        "vision-studio",
+        "vision-apple",
+        "pureboard",
+        "palette",
+        "annotate",
+        "collection",
+        "tags",
+        "tag-groups",
+        "rating",
+        "note",
+        "table"
+      ],
+      "layout": {
+        "version": 1,
+        "root": {
+          "type": "group",
+          "id": "main"
+        },
+        "primary": "main",
+        "panels": {
+          "sidebar": true,
+          "inspector": true
+        },
+        "panelSizes": {
+          "sidebar": 270,
+          "inspector": 320
+        },
+        "sidebars": {
+          "version": 4,
+          "containers": [
+            {
+              "id": "host.navigation",
+              "side": "left",
+              "type": "tabs",
+              "views": [
+                "host.navigation"
+              ],
+              "active": "host.navigation"
+            },
+            {
+              "id": "host.context",
+              "side": "left",
+              "type": "context",
+              "views": [],
+              "active": "",
+              "contexts": {
+                "collection": {
+                  "tools": [
+                    "host.filters",
+                    "visual-search.similar-panel"
+                  ],
+                  "active": "visual-search.similar-panel"
+                }
+              }
+            },
+            {
+              "id": "host.inspector",
+              "side": "right",
+              "type": "tabs",
+              "views": [
+                "host.inspector"
+              ],
+              "active": "host.inspector"
+            }
+          ],
+          "selected": {
+            "left": "host.navigation",
+            "right": "host.inspector"
+          },
+          "hidden": [],
+          "weights": {
+            "host.navigation": 0.45,
+            "host.context": 0.55,
+            "host.inspector": 1
+          }
+        },
+        "contents": {
+          "main": {
+            "items": [
+              {
+                "kind": "page",
+                "type": "collection",
+                "target": {
+                  "presetId": "all"
+                },
+                "presentation": {
+                  "layout": "masonry",
+                  "options": {},
+                  "zoom": 240
+                }
+              },
+              {
+                "kind": "page",
+                "type": "collection",
+                "target": {
+                  "presetId": "visual-search.indexed"
+                },
+                "presentation": {
+                  "layout": "masonry",
+                  "options": {},
+                  "zoom": 220
+                }
+              },
+              {
+                "kind": "page",
+                "type": "collection",
+                "target": {
+                  "presetId": "vision-studio.with-text"
+                },
+                "presentation": {
+                  "layout": "masonry",
+                  "options": {},
+                  "zoom": 220
+                }
+              },
+              {
+                "kind": "page",
+                "type": "collection",
+                "target": {
+                  "presetId": "vision-studio.cutouts"
+                },
+                "presentation": {
+                  "layout": "masonry",
+                  "options": {},
+                  "zoom": 210
+                }
+              }
+            ],
+            "active": 0
+          }
+        }
+      }
+    }
+  ],
+  "locales": {
+    "en": {
+      "灵图检索 · 以图搜图与全能视觉工坊套件": "Visual Search · Image Similarity & All-in-One Vision Suite",
+      "离线本机以图搜图、中英文自然语言文搜图、图文跨模态混搜、外图零入库拖搜与三档视觉去重套件，并可选联动灵眸视觉（实况文本 OCR + 一键智能抠图）。随套打包 Apple Vision（768 维神经特征，Apple Silicon 默认开箱即用）、Chinese-CLIP 中文语义引擎（导入官方共享运行包即开启 512 维中英文文搜图）与跨平台经典视觉引擎，支持无感热切换。": "Offline on-device reverse image search, bilingual natural-language text-to-image & cross-modal blending, zero-ingest external drag search, and 3-tier visual deduplication, optionally paired with Vision Studio (Live Text OCR + smart cutouts). Ships with Apple Vision (768D neural features, enabled by default on Apple Silicon), Chinese-CLIP (512D bilingual text/image semantic engine via shared runtime), and the cross-platform Classic engine for seamless hot-swapping.",
+      "灵图检索 · 以图搜图与重复清理": "Visual Search · Similarity & Deduplication",
+      "默认启用灵图检索与 Apple Vision 视觉特征引擎（零配置开箱即用；Chinese-CLIP 中文语义引擎与经典视觉特征引擎随套件预装，导入官方运行包并一键切换即可开启中英文自然语言文搜图与图文跨模态混搜）。含全部图库与视觉索引视图，右侧常驻「相似灵感」智能上下文容器与详情检查器。": "Enables Visual Search and the Apple Vision embedding engine out of the box (with Chinese-CLIP bilingual text-to-image engine and the cross-platform Classic engine bundled locally for one-click switching), featuring All Items, Indexed Views, and right-side Similar Inspiration context panel and inspector.",
+      "全能视觉工坊 · 搜图 + 识字 + 抠图": "All-in-One Vision Studio · Search + OCR + Cutout",
+      "融合灵图检索（以图搜图、文搜图与重复清理）与灵眸视觉（实况文本 OCR 全文检索与一键透明主体抠图），默认启用 Apple Vision 双本机引擎（零配置开箱即用；Chinese-CLIP 中文语义引擎与经典视觉引擎随套件预装，可随时热切换），一站统筹视觉检索、文字提取与灵感参考板拼贴。": "Combines Visual Search (reverse image search, text-to-image & deduplication) with Vision Studio (Live Text OCR & one-click transparent cutouts) on Apple Vision on-device engines out of the box (Chinese-CLIP and Classic engines bundled locally for hot-swapping), with PureBoard collage and faceted library tools.",
+      "preview": "Previews",
+      "image": "Image",
+      "text": "Text",
+      "预览": "Previews",
+      "图片": "Image",
+      "文字": "Text",
+      "灵图检索": "Visual Search",
+      "Apple Vision 视觉特征引擎": "Apple Vision Embedding Engine",
+      "经典视觉特征引擎": "Classic Visual Feature Engine",
+      "Chinese-CLIP 中文语义视觉引擎": "Chinese-CLIP Semantic Visual Engine",
+      "灵眸视觉": "Vision Studio",
+      "Apple Vision 视觉引擎": "Apple Vision Engine",
+      "灵感参考板": "PureBoard",
+      "色彩与色板": "Colors and palettes",
+      "批注": "Annotations",
+      "组": "Folders",
+      "标签基础": "Tags",
+      "标签分组": "Tag groups",
+      "评分": "Rating",
+      "笔记": "Notes",
+      "表格": "Table",
+      "灵眸视觉 · 实况文本 OCR 与一键智能抠图套件": "Vision Studio · Live Text OCR & Smart Cutout Suite",
+      "离线本机图片文字识别（实况文本 OCR + 全局全文搜索）与一键透明主体抠图套件。随套提供 Apple Vision（Apple Silicon 神经网络引擎离线加速，默认开箱即用）与跨平台 Tesseract 双引擎包，支持无感热切换与灵感参考板透明拼贴。": "Offline on-device image OCR (Live Text + full-text search) and one-click transparent subject cutout suite. Ships with both Apple Vision (enabled by default on Apple Silicon with zero setup) and cross-platform Tesseract engines for seamless hot-swapping and PureBoard collage workflows.",
+      "灵眸视觉 · 识字与抠图库": "Vision Studio · OCR & Cutout Library",
+      "默认启用灵眸视觉与 Apple Vision 本机引擎（零配置开箱即用；Tesseract 引擎包随套件安装，需跨平台或切换引擎时可在设置中一键启用）。含全部图库、含字图片与智能抠图视图，右侧集成智能上下文容器与详情检查器。": "Enables Vision Studio and the Apple Vision on-device engine out of the box (with Tesseract bundled locally for one-click enabling on Windows/Linux or engine switching), featuring All Items, Images with Text, Smart Cutouts, and right-side context tools and inspector.",
+      "灵眸拼贴 · 抠图与参考板": "Vision Collage · Cutouts & Reference Board",
+      "专为「一键抠出透明主体 → 拖入灵感参考板自由拼贴」打造的双栏视觉创作台：左栏常驻智能抠图与含字素材，主区展开图库与灵感参考板；默认启用 Apple Vision 离线引擎，亦可按需切换 Tesseract。": "Two-column collage workspace crafted for dragging transparent subject cutouts directly into PureBoard reference boards, with a pinned cutouts & OCR shelf on the left and the main gallery/board canvas on the right.",
+      "Tesseract 跨平台文字识别引擎": "Tesseract Cross-Platform OCR Engine",
+      "灵图与灵眸": "Visual Search & Vision",
+      "把以图搜图、中英文自然语言文搜图、视觉去重、实况文本 OCR 与一键透明抠图合在一套，按需挂载或热切换本地视觉引擎。": "Unites reverse image search, bilingual text-to-image search, visual deduplication, Live Text OCR, and one-click subject cutouts with hot-swappable local vision engines.",
+      "灵图检索 · 以图/文搜图与去重": "Visual Search · Similarity & Dedup",
+      "以图搜图、外图拖入直搜、相似灵感侧栏与重复连拍清理；配 Chinese-CLIP 运行包可开启中英文文搜图。": "Reverse image search, drag-to-search without importing, similar-item sidebar, and duplicate cleanup; add the Chinese-CLIP runtime for text search.",
+      "灵眸视觉 · 实况 OCR 与一键抠图": "Vision Studio · Live Text OCR & Cutout",
+      "识别图片文字写入全局搜索、支持直接划选复制，一键抠出透明主体并无损导出。": "Index and copy text directly from images, and lift clean transparent subjects for collage or export.",
+      "视觉全能台 · 搜图 + 识字 + 抠图": "Full Vision Desk · Search + OCR + Cutout",
+      "同时开启视觉检索、实况 OCR、一键抠图与灵感参考板，一套覆盖全部看图需求。": "Enables visual search, Live Text OCR, cutouts, and PureBoard together in one workspace.",
+      "Chinese-CLIP 中文语义引擎": "Chinese-CLIP Semantic Engine",
+      "Apple Vision 识字抠图引擎": "Apple Vision OCR & Cutout Engine",
+      "Tesseract 跨平台 OCR 引擎": "Tesseract OCR Engine"
+    }
+  }
+}

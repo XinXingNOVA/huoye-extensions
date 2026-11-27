@@ -1,0 +1,292 @@
+{
+  "formatVersion": 1,
+  "id": "vault-insight",
+  "title": "仓库洞察",
+  "version": "0.1.0",
+  "description": "看清大型仓库的脉络与冗余：用交互式关系星图梳理双链、标签与相似素材，用空间树图排查大文件、精确重复项与孤岛资产。",
+  "packages": [
+    "packages/link-graph.hyplugin",
+    "packages/vault-doctor.hyplugin",
+    "packages/visual-search.hyplugin",
+    "packages/embed-apple.hyplugin",
+    "packages/annotate.hyplugin",
+    "packages/collection.hyplugin",
+    "packages/tags.hyplugin",
+    "packages/tag-groups.hyplugin",
+    "packages/note.hyplugin",
+    "packages/rating.hyplugin",
+    "packages/table.hyplugin",
+    "packages/fields.hyplugin",
+    "packages/source.hyplugin"
+  ],
+  "presets": [
+    {
+      "id": "vault-insight",
+      "recommendedTheme": "silver-gelatin",
+      "title": "星图与体检 · 轻量版",
+      "description": "不依赖视觉模型，启用全局与局部关系星图、空间树图及重复项体检。",
+      "plugins": [
+        "preview",
+        "image",
+        "text",
+        "pdf",
+        "link-graph",
+        "vault-doctor",
+        "annotate",
+        "collection",
+        "tags",
+        "tag-groups",
+        "note",
+        "rating",
+        "table",
+        "fields",
+        "source"
+      ],
+      "layout": {
+        "version": 1,
+        "root": {
+          "type": "group",
+          "id": "main"
+        },
+        "primary": "main",
+        "panels": {
+          "sidebar": true,
+          "inspector": true
+        },
+        "panelSizes": {
+          "sidebar": 256,
+          "inspector": 336
+        },
+        "sidebars": {
+          "version": 4,
+          "containers": [
+            {
+              "id": "host.navigation",
+              "side": "left",
+              "type": "tabs",
+              "views": [
+                "host.navigation"
+              ],
+              "active": "host.navigation"
+            },
+            {
+              "id": "host.context",
+              "side": "right",
+              "type": "context",
+              "views": [],
+              "active": "",
+              "contexts": {
+                "collection": {
+                  "tools": [
+                    "host.filters",
+                    "link-graph.local-panel"
+                  ],
+                  "active": "link-graph.local-panel"
+                }
+              }
+            },
+            {
+              "id": "host.inspector",
+              "side": "right",
+              "type": "tabs",
+              "views": [
+                "host.inspector"
+              ],
+              "active": "host.inspector"
+            }
+          ],
+          "selected": {
+            "left": "host.navigation",
+            "right": "host.context"
+          },
+          "hidden": [],
+          "weights": {
+            "host.navigation": 1,
+            "host.context": 0.54,
+            "host.inspector": 0.46
+          }
+        },
+        "contents": {
+          "main": {
+            "items": [
+              {
+                "kind": "page",
+                "type": "collection",
+                "target": {
+                  "presetId": "all"
+                },
+                "presentation": {
+                  "layout": "masonry",
+                  "options": {},
+                  "zoom": 230
+                }
+              }
+            ],
+            "active": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "vault-insight-visual",
+      "recommendedTheme": "silver-gelatin",
+      "title": "全维星图 · 含视觉相似连线",
+      "description": "联动灵图检索，在关系星图中叠加视觉相似灵感连线。",
+      "plugins": [
+        "preview",
+        "image",
+        "text",
+        "pdf",
+        "link-graph",
+        "vault-doctor",
+        "visual-search",
+        "embed-apple",
+        "annotate",
+        "collection",
+        "tags",
+        "tag-groups",
+        "note",
+        "rating",
+        "table",
+        "fields",
+        "source"
+      ],
+      "layout": {
+        "version": 1,
+        "root": {
+          "type": "group",
+          "id": "main"
+        },
+        "primary": "main",
+        "panels": {
+          "sidebar": true,
+          "inspector": true
+        },
+        "panelSizes": {
+          "sidebar": 260,
+          "inspector": 340
+        },
+        "sidebars": {
+          "version": 4,
+          "containers": [
+            {
+              "id": "host.navigation",
+              "side": "left",
+              "type": "tabs",
+              "views": [
+                "host.navigation"
+              ],
+              "active": "host.navigation"
+            },
+            {
+              "id": "host.context",
+              "side": "right",
+              "type": "context",
+              "views": [],
+              "active": "",
+              "contexts": {
+                "collection": {
+                  "tools": [
+                    "host.filters",
+                    "link-graph.local-panel",
+                    "visual-search.similar-panel"
+                  ],
+                  "active": "link-graph.local-panel"
+                }
+              }
+            },
+            {
+              "id": "host.inspector",
+              "side": "right",
+              "type": "tabs",
+              "views": [
+                "host.inspector"
+              ],
+              "active": "host.inspector"
+            }
+          ],
+          "selected": {
+            "left": "host.navigation",
+            "right": "host.context"
+          },
+          "hidden": [],
+          "weights": {
+            "host.navigation": 1,
+            "host.context": 0.56,
+            "host.inspector": 0.44
+          }
+        },
+        "contents": {
+          "main": {
+            "items": [
+              {
+                "kind": "page",
+                "type": "collection",
+                "target": {
+                  "presetId": "all"
+                },
+                "presentation": {
+                  "layout": "masonry",
+                  "options": {},
+                  "zoom": 230
+                }
+              },
+              {
+                "kind": "page",
+                "type": "collection",
+                "target": {
+                  "presetId": "visual-search.indexed"
+                },
+                "presentation": {
+                  "layout": "masonry",
+                  "options": {},
+                  "zoom": 220
+                }
+              }
+            ],
+            "active": 0
+          }
+        }
+      }
+    }
+  ],
+  "locales": {
+    "en": {
+      "星图与仓库体检 · 资产关系网络与空间治理套件": "Vault Insight · Asset Relation Graph & Storage Health Suite",
+      "面向知识库维护者、研究者与重度素材收集者的全局关系洞察与空间治理套件：集成「资产关系星图」（60fps Barnes-Hut 力导向图谱、双链/批注/分组/标签/视觉相似全 5 维关系抽取、1–2 跳局部星图侧栏与孤岛素材一键检出）与「仓库体检仪」（Squarified Treemap 三维空间树图、SHA-256 精确重复智能原件推荐、加工失败/孤立批注/回收站治理与原生 SQLite 压缩回收），并可选联动「灵图检索」与 Apple Vision 开启视觉相似灵感连线。": "Global relation insight and storage governance suite for knowledge keepers and heavy collectors: unites Link Graph (60fps Barnes-Hut force-directed network across links, annotations, folders, tags, and visual similarity, with 1–2 hop local graph sidebar and orphan detection) and Vault Doctor (Squarified Treemap storage map, SHA-256 duplicate cleanup with smart original picks, orphan/trash hygiene, and native SQLite compaction), optionally paired with Visual Search and Apple Vision.",
+      "星图与仓库体检 · 轻量洞察版": "Vault Insight · Lightweight Graph & Health",
+      "零计算引擎依赖的轻量洞察工作台：启用资产关系星图、仓库体检仪与批注/组/标签/笔记/评分/表格/自定义字段/来源配套插件。右侧智能上下文容器常驻「筛选」与「局部星图」，随选随看当前素材的 1–2 跳关系网络。": "Zero-compute-engine lightweight workspace combining Link Graph, Vault Doctor, and full curation plugins, with Filters and Local Graph docked in the right smart context sidebar.",
+      "全维星图与体检 · 含视觉相似连线": "Vault Insight Visual · Full Graph + Visual Similarity",
+      "在轻量洞察版基础上开启「灵图检索」与 Apple Vision 视觉特征引擎（单引擎零配置自动装配），为资产关系星图解锁「视觉相似灵感连线」图层，同时右侧智能容器整合「局部星图」与「相似灵感」，实现语义与视觉双维关系探索。": "Enables Visual Search and the Apple Vision embedding engine out of the box on top of Vault Insight, unlocking Visual Similarity edges in Link Graph alongside Local Graph and Similar Inspiration context panels.",
+      "preview": "Previews",
+      "image": "Image",
+      "text": "Text",
+      "pdf": "PDF",
+      "预览": "Previews",
+      "图片": "Image",
+      "文字": "Text",
+      "PDF": "PDF",
+      "资产关系星图 · Link Graph": "Link Graph · Asset Relation Map",
+      "仓库体检仪与空间大扫除": "Vault Doctor · Storage & Health Cleanup",
+      "灵图检索": "Visual Search",
+      "Apple Vision 视觉特征引擎": "Apple Vision Embedding Engine",
+      "批注": "Annotations",
+      "组": "Folders",
+      "标签基础": "Tags",
+      "标签分组": "Tag groups",
+      "笔记": "Notes",
+      "评分": "Rating",
+      "表格": "Table",
+      "自定义字段": "Custom fields",
+      "来源": "Source",
+      "仓库洞察": "Vault Insight",
+      "看清大型仓库的脉络与冗余：用交互式关系星图梳理双链、标签与相似素材，用空间树图排查大文件、精确重复项与孤岛资产。": "Map and maintain large libraries with an interactive relation graph across links, tags, and similarity, paired with treemap storage analysis and exact duplicate cleanup.",
+      "星图与体检 · 轻量版": "Graph & Health · Light",
+      "不依赖视觉模型，启用全局与局部关系星图、空间树图及重复项体检。": "Lightweight graph, treemap storage breakdown, and duplicate hygiene without vision models.",
+      "全维星图 · 含视觉相似连线": "Full Graph · With Visual Similarity",
+      "联动灵图检索，在关系星图中叠加视觉相似灵感连线。": "Links Visual Search to overlay visual-similarity edges inside the relation graph.",
+      "资产关系星图": "Link Graph",
+      "仓库体检仪": "Vault Doctor"
+    }
+  }
+}

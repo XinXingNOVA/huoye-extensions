@@ -1,0 +1,409 @@
+{
+  "formatVersion": 1,
+  "id": "design-studio",
+  "title": "设计工坊",
+  "version": "0.1.0",
+  "description": "面向品牌与视觉设计的资产工作台：字体试打墙与可变轴、PSD/PSB 图层审稿、SVG 图标调色、3D 模型展台与灵感参考板。",
+  "packages": [
+    "packages/font-studio.hyplugin",
+    "packages/psd-studio.hyplugin",
+    "packages/svg-studio.hyplugin",
+    "packages/mesh-viewer.hyplugin",
+    "packages/pureboard.hyplugin",
+    "packages/palette.hyplugin",
+    "packages/image-filter.hyplugin",
+    "packages/gallery.hyplugin",
+    "packages/annotate.hyplugin",
+    "packages/collection.hyplugin",
+    "packages/tags.hyplugin",
+    "packages/tag-groups.hyplugin",
+    "packages/rating.hyplugin",
+    "packages/status.hyplugin",
+    "packages/note.hyplugin",
+    "packages/table.hyplugin"
+  ],
+  "presets": [
+    {
+      "id": "studio",
+      "recommendedTheme": "silver-gelatin",
+      "title": "综合设计资产库",
+      "description": "统一管理字体、PSD、SVG、3D 模型与图片参考，按选中类型自动切换工具栏。",
+      "plugins": [
+        "preview",
+        "image",
+        "font-studio",
+        "psd-studio",
+        "svg-studio",
+        "mesh-viewer",
+        "pureboard",
+        "palette",
+        "image-filter",
+        "gallery",
+        "annotate",
+        "collection",
+        "tags",
+        "tag-groups",
+        "rating",
+        "status",
+        "note",
+        "table"
+      ],
+      "layout": {
+        "version": 1,
+        "root": {
+          "type": "group",
+          "id": "main"
+        },
+        "primary": "main",
+        "panels": {
+          "sidebar": true,
+          "inspector": true
+        },
+        "panelSizes": {
+          "sidebar": 280,
+          "inspector": 310
+        },
+        "sidebars": {
+          "version": 4,
+          "containers": [
+            {
+              "id": "host.navigation",
+              "side": "left",
+              "type": "tabs",
+              "views": [
+                "host.navigation"
+              ],
+              "active": "host.navigation"
+            },
+            {
+              "id": "host.context",
+              "side": "left",
+              "type": "context",
+              "views": [],
+              "active": "",
+              "contexts": {
+                "collection": {
+                  "tools": [
+                    "host.filters"
+                  ],
+                  "active": "host.filters"
+                }
+              }
+            },
+            {
+              "id": "host.inspector",
+              "side": "right",
+              "type": "tabs",
+              "views": [
+                "host.inspector"
+              ],
+              "active": "host.inspector"
+            }
+          ],
+          "selected": {
+            "left": "host.navigation",
+            "right": "host.inspector"
+          },
+          "hidden": [],
+          "weights": {
+            "host.navigation": 0.45,
+            "host.context": 0.55,
+            "host.inspector": 1
+          }
+        },
+        "contents": {
+          "main": {
+            "items": [
+              {
+                "kind": "page",
+                "type": "collection",
+                "target": {
+                  "presetId": "all"
+                },
+                "presentation": {
+                  "layout": "masonry",
+                  "options": {},
+                  "zoom": 240
+                }
+              }
+            ],
+            "active": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "type-wall",
+      "recommendedTheme": "silver-gelatin",
+      "title": "字体馆 · 试打瀑布流",
+      "description": "直接进入全局同步试打墙，调节字号字距与可变轴，并排比对多款字体。",
+      "plugins": [
+        "preview",
+        "image",
+        "font-studio",
+        "psd-studio",
+        "svg-studio",
+        "mesh-viewer",
+        "pureboard",
+        "palette",
+        "image-filter",
+        "gallery",
+        "annotate",
+        "collection",
+        "tags",
+        "tag-groups",
+        "rating",
+        "status",
+        "note",
+        "table"
+      ],
+      "layout": {
+        "version": 1,
+        "root": {
+          "type": "group",
+          "id": "main"
+        },
+        "primary": "main",
+        "panels": {
+          "sidebar": true,
+          "inspector": true
+        },
+        "panelSizes": {
+          "sidebar": 270,
+          "inspector": 310
+        },
+        "sidebars": {
+          "version": 4,
+          "containers": [
+            {
+              "id": "host.navigation",
+              "side": "left",
+              "type": "tabs",
+              "views": [
+                "host.navigation"
+              ],
+              "active": "host.navigation"
+            },
+            {
+              "id": "host.context",
+              "side": "left",
+              "type": "context",
+              "views": [],
+              "active": "",
+              "contexts": {
+                "collection": {
+                  "tools": [
+                    "host.filters"
+                  ],
+                  "active": "host.filters"
+                }
+              }
+            },
+            {
+              "id": "host.inspector",
+              "side": "right",
+              "type": "tabs",
+              "views": [
+                "host.inspector"
+              ],
+              "active": "host.inspector"
+            }
+          ],
+          "selected": {
+            "left": "host.navigation",
+            "right": "host.inspector"
+          },
+          "hidden": [],
+          "weights": {
+            "host.navigation": 0.42,
+            "host.context": 0.58,
+            "host.inspector": 1
+          }
+        },
+        "contents": {
+          "main": {
+            "items": [
+              {
+                "kind": "page",
+                "type": "collection",
+                "target": {
+                  "presetId": "font-studio.all"
+                },
+                "presentation": {
+                  "layout": "font-wall",
+                  "options": {
+                    "wallMode": "list",
+                    "showMetrics": true,
+                    "showLicense": true
+                  },
+                  "zoom": 320
+                }
+              },
+              {
+                "kind": "page",
+                "type": "collection",
+                "target": {
+                  "presetId": "all"
+                },
+                "presentation": {
+                  "layout": "masonry",
+                  "options": {},
+                  "zoom": 240
+                }
+              }
+            ],
+            "active": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "catalog",
+      "recommendedTheme": "reference-desk",
+      "title": "设计台账 · 规格检索",
+      "description": "以表格核对字体授权、PSD 尺寸 DPI、SVG 颜色与 3D 面数。",
+      "plugins": [
+        "preview",
+        "image",
+        "font-studio",
+        "psd-studio",
+        "svg-studio",
+        "mesh-viewer",
+        "pureboard",
+        "palette",
+        "image-filter",
+        "gallery",
+        "annotate",
+        "collection",
+        "tags",
+        "tag-groups",
+        "rating",
+        "status",
+        "note",
+        "table"
+      ],
+      "layout": {
+        "version": 1,
+        "root": {
+          "type": "group",
+          "id": "main"
+        },
+        "primary": "main",
+        "panels": {
+          "sidebar": true,
+          "inspector": true
+        },
+        "panelSizes": {
+          "sidebar": 280,
+          "inspector": 330
+        },
+        "sidebars": {
+          "version": 4,
+          "containers": [
+            {
+              "id": "host.navigation",
+              "side": "left",
+              "type": "tabs",
+              "views": [
+                "host.navigation"
+              ],
+              "active": "host.navigation"
+            },
+            {
+              "id": "host.context",
+              "side": "left",
+              "type": "context",
+              "views": [],
+              "active": "",
+              "contexts": {
+                "collection": {
+                  "tools": [
+                    "host.filters"
+                  ],
+                  "active": "host.filters"
+                }
+              }
+            },
+            {
+              "id": "host.inspector",
+              "side": "right",
+              "type": "tabs",
+              "views": [
+                "host.inspector"
+              ],
+              "active": "host.inspector"
+            }
+          ],
+          "selected": {
+            "left": "host.navigation",
+            "right": "host.inspector"
+          },
+          "hidden": [],
+          "weights": {
+            "host.navigation": 0.4,
+            "host.context": 0.6,
+            "host.inspector": 1
+          }
+        },
+        "contents": {
+          "main": {
+            "items": [
+              {
+                "kind": "page",
+                "type": "collection",
+                "target": {
+                  "presetId": "all"
+                },
+                "presentation": {
+                  "layout": "table",
+                  "options": {}
+                }
+              }
+            ],
+            "active": 0
+          }
+        }
+      }
+    }
+  ],
+  "locales": {
+    "en": {
+      "设计工坊 · 视觉与字体资产套件": "Design Studio · Visual & Typography Asset Suite",
+      "面向视觉设计、品牌排印、矢量图标与 3D 资产管理的一站式桌面工作台套件。集成字体馆（TTF/OTF/WOFF1/WOFF2 试打墙与可变轴实验室）、PSD/PSB 零依赖本机图层工坊、矢量 SVG 安全检视与换色导出、WebGL2 3D 模型雕塑展台及灵感参考板、色板检索与画幅筛选。": "An all-in-one desktop asset workbench for visual design, brand typography, vector icons, and 3D models — uniting Font Studio, zero-dependency local PSD/PSB Layer Studio, safe SVG Vector Studio, WebGL2 3D Sculpture Stage, Reference Board, color palettes, and dimension filters.",
+      "设计工坊 · 综合资产库": "Design Studio · Visual Asset Library",
+      "一站式统筹图片、字体、PSD/PSB、SVG 图标、3D 模型与灵感参考板；瀑布流浏览配合自动色板提取，左侧导航与智能工具容器自动切换字体工坊、PSD 图层树、SVG 调色检视与 3D 材质面板，右侧查看规格详情。": "Organize images, fonts, PSD/PSB files, SVG icons, 3D meshes, and reference boards in a masonry gallery with automatic palette extraction, smart contextual panels on the left, and detailed specs on the right.",
+      "字体馆 · 试打瀑布流": "Font Studio · Type Wall",
+      "以瑞士排印字体试打墙直入字库：全局同步试打、字号字距滑块、宣纸/暗墨底色、中/拉丁/可变字体快速筛选与 2–4 款一键同屏对比，并保留全部资产视图随时切换。": "Open directly into the Swiss Type Wall with live synchronized specimen typing, size and tracking sliders, paper/ink surfaces, script/variable filters, and side-by-side comparison.",
+      "设计台账 · 规格检索": "Design Ledger · Spec Table",
+      "以表格台账逐行核对字体商用授权与字重、PSD 画幅 DPI、SVG 颜色与路径数、3D 三角面与贴图、色板与状态评分，配合左侧多维筛选快速定位交付资产。": "Audit font licenses and weights, PSD dimensions and DPI, SVG colors and path counts, 3D triangle counts, palettes, and statuses row by row with faceted filtering.",
+      "preview": "Previews",
+      "image": "Image",
+      "预览": "Previews",
+      "图片": "Image",
+      "字体馆 · 活字试打与详检工作室": "Font Studio · Type Wall & Specimen",
+      "PSD 图层工坊": "PSD Layer Studio",
+      "矢量图标工坊": "SVG Studio",
+      "3D 资产检视 · 雕塑展台": "3D Asset Viewer · Sculpture Stage",
+      "灵感参考板": "PureBoard",
+      "色彩与色板": "Colors and palettes",
+      "画幅与尺寸": "Orientation and dimensions",
+      "画廊": "Gallery",
+      "批注": "Annotations",
+      "组": "Folders",
+      "标签基础": "Tags",
+      "标签分组": "Tag groups",
+      "评分": "Rating",
+      "状态": "Status",
+      "笔记": "Notes",
+      "表格": "Table",
+      "设计工坊": "Design Studio",
+      "面向品牌与视觉设计的资产工作台：字体试打墙与可变轴、PSD/PSB 图层审稿、SVG 图标调色、3D 模型展台与灵感参考板。": "Visual design asset desk featuring a live type specimen wall, local PSD/PSB layer inspection, safe SVG recoloring, WebGL2 3D turntable, and PureBoard.",
+      "综合设计资产库": "Visual Asset Library",
+      "统一管理字体、PSD、SVG、3D 模型与图片参考，按选中类型自动切换工具栏。": "Organize fonts, PSDs, SVGs, 3D models, and references with context-aware inspector tools.",
+      "直接进入全局同步试打墙，调节字号字距与可变轴，并排比对多款字体。": "Open directly into the synchronized type wall with variable axes, specimen views, and side-by-side comparison.",
+      "以表格核对字体授权、PSD 尺寸 DPI、SVG 颜色与 3D 面数。": "Audit font licenses, PSD dimensions, SVG palettes, and 3D poly counts row by row.",
+      "字体馆": "Font Studio",
+      "3D 雕塑展台": "3D Mesh Viewer"
+    }
+  }
+}

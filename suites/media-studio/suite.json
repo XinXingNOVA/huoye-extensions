@@ -1,0 +1,563 @@
+{
+  "formatVersion": 1,
+  "id": "media-studio",
+  "title": "黑胶放映与听译",
+  "version": "0.1.0",
+  "description": "将放映室、黑胶台、离线语音听译与视频无损快剪合为一套：逐帧拉片、黑胶听音、搜台词直达原声与自动分镜剪辑按预设切换。",
+  "packages": [
+    "packages/cine-player.hyplugin",
+    "packages/vinyl-audio.hyplugin",
+    "packages/media-shelf.hyplugin",
+    "packages/annotate.hyplugin",
+    "packages/collection.hyplugin",
+    "packages/tags.hyplugin",
+    "packages/tag-groups.hyplugin",
+    "packages/rating.hyplugin",
+    "packages/status.hyplugin",
+    "packages/note.hyplugin",
+    "packages/table.hyplugin",
+    "packages/speech-whisper.hyplugin",
+    "packages/whisper-studio.hyplugin",
+    "packages/clip-cutter.hyplugin"
+  ],
+  "presets": [
+    {
+      "id": "cinema",
+      "recommendedTheme": "silver-gelatin",
+      "title": "黑胶放映室 · 综合影音",
+      "description": "自适应唱片与影院墙，支持悬停预览、内封多语字幕与真实音频波形。",
+      "plugins": [
+        "preview",
+        "video",
+        "audio",
+        "image",
+        "cine-player",
+        "vinyl-audio",
+        "media-shelf",
+        "annotate",
+        "collection",
+        "tags",
+        "tag-groups",
+        "rating",
+        "status",
+        "note",
+        "table"
+      ],
+      "layout": {
+        "version": 1,
+        "root": {
+          "type": "group",
+          "id": "main"
+        },
+        "primary": "main",
+        "panels": {
+          "sidebar": true,
+          "inspector": true
+        },
+        "panelSizes": {
+          "sidebar": 280,
+          "inspector": 310
+        },
+        "sidebars": {
+          "version": 4,
+          "containers": [
+            {
+              "id": "host.navigation",
+              "side": "left",
+              "type": "tabs",
+              "views": [
+                "host.navigation"
+              ],
+              "active": "host.navigation"
+            },
+            {
+              "id": "host.context",
+              "side": "left",
+              "type": "context",
+              "views": [],
+              "active": "",
+              "contexts": {
+                "collection": {
+                  "tools": [
+                    "host.filters"
+                  ],
+                  "active": "host.filters"
+                }
+              }
+            },
+            {
+              "id": "host.inspector",
+              "side": "right",
+              "type": "tabs",
+              "views": [
+                "host.inspector"
+              ],
+              "active": "host.inspector"
+            }
+          ],
+          "selected": {
+            "left": "host.navigation",
+            "right": "host.inspector"
+          },
+          "hidden": [],
+          "weights": {
+            "host.navigation": 0.45,
+            "host.context": 0.55,
+            "host.inspector": 1
+          }
+        },
+        "contents": {
+          "main": {
+            "items": [
+              {
+                "kind": "page",
+                "type": "collection",
+                "target": {
+                  "presetId": "all"
+                },
+                "presentation": {
+                  "layout": "media-wall",
+                  "options": {
+                    "wallStyle": "studio",
+                    "groupBy": "none",
+                    "showProgress": true,
+                    "showTechBadge": true,
+                    "hoverScrub": true
+                  }
+                }
+              },
+              {
+                "kind": "page",
+                "type": "media-shelf.hub",
+                "target": {}
+              }
+            ],
+            "active": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "vinyl",
+      "recommendedTheme": "silver-gelatin",
+      "title": "黑胶唱片馆 · 音乐专注",
+      "description": "按专辑陈列 1:1 唱片封套，配黑胶唱盘、滚动歌词与 10 段均衡器。",
+      "plugins": [
+        "preview",
+        "video",
+        "audio",
+        "image",
+        "cine-player",
+        "vinyl-audio",
+        "media-shelf",
+        "annotate",
+        "collection",
+        "tags",
+        "tag-groups",
+        "rating",
+        "status",
+        "note",
+        "table"
+      ],
+      "layout": {
+        "version": 1,
+        "root": {
+          "type": "group",
+          "id": "main"
+        },
+        "primary": "main",
+        "panels": {
+          "sidebar": true,
+          "inspector": true
+        },
+        "panelSizes": {
+          "sidebar": 280,
+          "inspector": 300
+        },
+        "sidebars": {
+          "version": 4,
+          "containers": [
+            {
+              "id": "host.navigation",
+              "side": "left",
+              "type": "tabs",
+              "views": [
+                "host.navigation"
+              ],
+              "active": "host.navigation"
+            },
+            {
+              "id": "host.context",
+              "side": "left",
+              "type": "context",
+              "views": [],
+              "active": "",
+              "contexts": {
+                "collection": {
+                  "tools": [
+                    "host.filters"
+                  ],
+                  "active": "host.filters"
+                }
+              }
+            },
+            {
+              "id": "host.inspector",
+              "side": "right",
+              "type": "tabs",
+              "views": [
+                "host.inspector"
+              ],
+              "active": "host.inspector"
+            }
+          ],
+          "selected": {
+            "left": "host.navigation",
+            "right": "host.inspector"
+          },
+          "hidden": [],
+          "weights": {
+            "host.navigation": 0.42,
+            "host.context": 0.58,
+            "host.inspector": 1
+          }
+        },
+        "contents": {
+          "main": {
+            "items": [
+              {
+                "kind": "page",
+                "type": "collection",
+                "target": {
+                  "presetId": "all"
+                },
+                "presentation": {
+                  "layout": "media-wall",
+                  "options": {
+                    "wallStyle": "vinyl",
+                    "groupBy": "album",
+                    "showProgress": true,
+                    "showTechBadge": true,
+                    "hoverScrub": true
+                  }
+                }
+              }
+            ],
+            "active": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "transcript-studio",
+      "recommendedTheme": "silver-gelatin",
+      "title": "离线听译与台词检索",
+      "description": "按需用本地 Whisper 生成时间码字幕并接入全局搜索，支持导出 SRT/VTT 与笔记。",
+      "plugins": [
+        "preview",
+        "video",
+        "audio",
+        "image",
+        "text",
+        "speech-whisper",
+        "whisper-studio",
+        "clip-cutter",
+        "cine-player",
+        "vinyl-audio",
+        "media-shelf",
+        "annotate",
+        "collection",
+        "tags",
+        "tag-groups",
+        "rating",
+        "status",
+        "note",
+        "table"
+      ],
+      "layout": {
+        "version": 1,
+        "root": {
+          "type": "group",
+          "id": "main"
+        },
+        "primary": "main",
+        "panels": {
+          "sidebar": true,
+          "inspector": true
+        },
+        "panelSizes": {
+          "sidebar": 280,
+          "inspector": 330
+        },
+        "sidebars": {
+          "version": 4,
+          "containers": [
+            {
+              "id": "host.navigation",
+              "side": "left",
+              "type": "tabs",
+              "views": [
+                "host.navigation"
+              ],
+              "active": "host.navigation"
+            },
+            {
+              "id": "host.context",
+              "side": "left",
+              "type": "context",
+              "views": [],
+              "active": "",
+              "contexts": {
+                "collection": {
+                  "tools": [
+                    "host.filters"
+                  ],
+                  "active": "host.filters"
+                }
+              }
+            },
+            {
+              "id": "host.inspector",
+              "side": "right",
+              "type": "tabs",
+              "views": [
+                "host.inspector"
+              ],
+              "active": "host.inspector"
+            }
+          ],
+          "selected": {
+            "left": "host.navigation",
+            "right": "host.inspector"
+          },
+          "hidden": [],
+          "weights": {
+            "host.navigation": 0.45,
+            "host.context": 0.55,
+            "host.inspector": 1
+          }
+        },
+        "contents": {
+          "main": {
+            "items": [
+              {
+                "kind": "page",
+                "type": "collection",
+                "target": {
+                  "presetId": "all"
+                },
+                "presentation": {
+                  "layout": "media-wall",
+                  "options": {
+                    "wallStyle": "studio",
+                    "groupBy": "none",
+                    "showProgress": true,
+                    "showTechBadge": true,
+                    "hoverScrub": true
+                  }
+                }
+              },
+              {
+                "kind": "page",
+                "type": "collection",
+                "target": {
+                  "presetId": "whisper-studio.transcribed"
+                },
+                "presentation": {
+                  "layout": "masonry",
+                  "options": {},
+                  "zoom": 220
+                }
+              }
+            ],
+            "active": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "clip-workbench",
+      "recommendedTheme": "silver-gelatin",
+      "title": "拉片分镜与无损快剪",
+      "description": "16:9 影院墙配无损秒切、自动镜头分镜拆解与高清故事板，支持不入库直出。",
+      "plugins": [
+        "preview",
+        "video",
+        "audio",
+        "image",
+        "text",
+        "speech-whisper",
+        "whisper-studio",
+        "clip-cutter",
+        "cine-player",
+        "vinyl-audio",
+        "media-shelf",
+        "annotate",
+        "collection",
+        "tags",
+        "tag-groups",
+        "rating",
+        "status",
+        "note",
+        "table"
+      ],
+      "layout": {
+        "version": 1,
+        "root": {
+          "type": "group",
+          "id": "main"
+        },
+        "primary": "main",
+        "panels": {
+          "sidebar": true,
+          "inspector": true
+        },
+        "panelSizes": {
+          "sidebar": 280,
+          "inspector": 330
+        },
+        "sidebars": {
+          "version": 4,
+          "containers": [
+            {
+              "id": "host.navigation",
+              "side": "left",
+              "type": "tabs",
+              "views": [
+                "host.navigation"
+              ],
+              "active": "host.navigation"
+            },
+            {
+              "id": "host.context",
+              "side": "left",
+              "type": "context",
+              "views": [],
+              "active": "",
+              "contexts": {
+                "collection": {
+                  "tools": [
+                    "host.filters"
+                  ],
+                  "active": "host.filters"
+                }
+              }
+            },
+            {
+              "id": "host.inspector",
+              "side": "right",
+              "type": "tabs",
+              "views": [
+                "host.inspector"
+              ],
+              "active": "host.inspector"
+            }
+          ],
+          "selected": {
+            "left": "host.navigation",
+            "right": "host.inspector"
+          },
+          "hidden": [],
+          "weights": {
+            "host.navigation": 0.42,
+            "host.context": 0.58,
+            "host.inspector": 1
+          }
+        },
+        "contents": {
+          "main": {
+            "items": [
+              {
+                "kind": "page",
+                "type": "collection",
+                "target": {
+                  "presetId": "all"
+                },
+                "presentation": {
+                  "layout": "media-wall",
+                  "options": {
+                    "wallStyle": "cinema",
+                    "groupBy": "state",
+                    "showProgress": true,
+                    "showTechBadge": true,
+                    "hoverScrub": true
+                  }
+                }
+              },
+              {
+                "kind": "page",
+                "type": "collection",
+                "target": {
+                  "presetId": "whisper-studio.transcribed"
+                },
+                "presentation": {
+                  "layout": "masonry",
+                  "options": {},
+                  "zoom": 220
+                }
+              },
+              {
+                "kind": "page",
+                "type": "media-shelf.hub",
+                "target": {}
+              }
+            ],
+            "active": 0
+          }
+        }
+      }
+    }
+  ],
+  "locales": {
+    "en": {
+      "黑胶放映室 · 专业影音套件": "Vinyl & Cinema Studio · Pro Media Suite",
+      "面向电影拉片、视频审片、无损黑胶听音与播客精听的一站式专业影音套件。深度接入宿主标准媒体能力总线，支持 MKV 内封多语字幕直切、FFmpeg 长音频流式真波形，并对放映室、黑胶台与唱片墙进行了全面视觉美学精修，默认搭配银盐暗房主题。": "An all-in-one studio suite for film study, video review, lossless Hi-Fi vinyl listening, and podcast study — wired into the host media capability bus for instant MKV embedded multilingual subtitles, streaming FFmpeg audio waveforms, and refined darkroom aesthetics across Cine Room, Vinyl Deck, and Media Wall.",
+      "黑胶放映室 · 综合影音": "Screening Room · All Media",
+      "混排自适应唱片与放映墙并配黑胶放映厅主页；视频悬停逐帧预览、黑胶唱片出鞘动效，左侧导航与智能工具容器自动切换台词分镜与黑胶控台，右侧查看详情。": "Adaptive vinyl sleeves & widescreen cinema wall paired with the Media Hub, live hover scrubbing, smart contextual panels on the left, and inspector on the right.",
+      "黑胶唱片馆 · 音乐专注": "Vinyl Hall · Hi-Fi Music",
+      "以 1:1 黑胶方砖按专辑陈列曲库，搭配黑胶台 Hi-Fi 唱盘、实时频谱、双语歌词、10 段参数 EQ 与歌单队列智能控台。": "Browse your music library as album-grouped 1:1 vinyl sleeves with turntable visuals, live spectrum, bilingual lyrics, 10-band EQ, and smart queue dock.",
+      "拉片与剪辑台 · 视频精研": "Screening Desk · Film Study",
+      "以 16:9 影院宽幕按观看状态组织片库；逐帧步进、A-B 循环、双语字幕稿、分镜标记导出 EDL/FCPXML 与双视频同步对比一应俱全。": "Organize videos as 16:9 film frames grouped by watch state with frame stepping, A-B loop, bilingual transcripts, EDL/FCPXML exports, and dual A/B comparison.",
+      "preview": "Previews",
+      "video": "Video",
+      "audio": "Audio",
+      "image": "Image",
+      "预览": "Previews",
+      "视频": "Video",
+      "音频": "Audio",
+      "图片": "Image",
+      "放映室 · 专业视频播放器": "Cine Room · Pro Video Player",
+      "黑胶台 · Hi-Fi 音乐与播客": "Vinyl Deck · Hi-Fi Audio & Podcasts",
+      "唱片墙与放映厅": "Media Wall & Hub",
+      "批注": "Annotations",
+      "组": "Folders",
+      "标签基础": "Tags",
+      "标签分组": "Tag groups",
+      "评分": "Rating",
+      "状态": "Status",
+      "笔记": "Notes",
+      "表格": "Table",
+      "听译剪辑工坊 · 离线语音转写与视频拆解套件": "Audio-Video AI Studio · Offline Whisper Transcription & Video Breakdown Suite",
+      "面向播客整理、访谈听译、电影拉片与视频二创的全栈离线音视频 AI 工坊套件：集成 Whisper 离线语音引擎（配合官方 Apple Silicon Metal 共享运行包 huoye-whisper，零 Python 依赖）、听译字幕工坊（按需转写绝不自动占 GPU、全文自动进入活页全局 FTS 检索、逐句时间戳点击跳转、SRT/VTT 导出与一键沉淀 Markdown 笔记）以及视频分镜与无损快剪工坊（毫秒级 -c copy 无损秒切、FFmpeg 自动场景分镜拆解与暗房/银盐高清故事板），并联袂黑胶放映室三大影音插件与 8 个生态整理插件。": "Full-stack offline audio & video AI suite for podcasts, interviews, film study, and video remixing: combines Whisper Offline Speech Engine (powered by the official Apple Silicon Metal huoye-whisper shared runtime with zero Python dependencies), Whisper Subtitle Studio (strictly on-demand transcription, global FTS search, click-to-seek cues, SRT/VTT export, and one-click Markdown notes), and Clip Cutter (lossless -c copy trimming, FFmpeg automatic scene breakdown, and Darkroom/Silver HD storyboards), together with Cine Room, Vinyl Deck, Media Shelf, and 8 core curation plugins.",
+      "听译字幕与全文检索": "Whisper Subtitles & Full-Text Search",
+      "面向播客听记、访谈整理与课程字幕检索的离线听译工作台：按需启动 Apple Silicon Metal 加速的本地 Whisper 离线语音引擎（导入音视频零 GPU 消耗），转写全文自动接入活页全局 FTS 检索，支持双主标签在全库影音墙与「已听写字幕」专库间切换，并一键导出 SRT/VTT 或沉淀为库内 Markdown 笔记。": "Offline transcription workspace for podcasts, interviews, and lectures: launches Apple Silicon Metal Whisper strictly on demand (zero GPU usage on import), indexes full transcripts into Huoye global FTS search, pairs the full Media Wall with a Transcribed Subtitles tab, and exports SRT/VTT or library Markdown notes in one click.",
+      "视频分镜与无损快剪": "Clip Cutter",
+      "面向剪辑师、拉片导演与视频创作者的拆解剪辑工作台：主视图以 16:9 影院宽幕组织视频片库并辅以「已听写字幕」与「黑胶放映厅」标签，随时呼出「视频分镜与无损快剪工坊」完成毫秒级 -c copy 无损秒切、FFmpeg 自动镜头分镜拆解与暗房/银盐高清故事板合成。": "Breakdown and editing workspace for video creators and film editors: organizes clips in a 16:9 cinema wall alongside Transcribed Subtitles and Media Hub tabs, with instant access to Clip Cutter for lossless -c copy trimming, FFmpeg auto scene splitting, and Darkroom/Silver HD storyboards.",
+      "text": "Text",
+      "文字": "Text",
+      "Whisper 离线语音引擎": "Whisper Speech Engine",
+      "听译字幕工坊": "Whisper Subtitle Studio",
+      "视频分镜与无损快剪工坊 · Clip Cutter": "Clip Cutter · Video Storyboard & Lossless Trimmer",
+      "黑胶放映与听译": "Screening & Transcript Studio",
+      "将放映室、黑胶台、离线语音听译与视频无损快剪合为一套：逐帧拉片、黑胶听音、搜台词直达原声与自动分镜剪辑按预设切换。": "Combines Cine Room, Vinyl Deck, offline Whisper transcription, and lossless clip cutting — switch presets between film study, Hi-Fi listening, subtitle search, and storyboard trimming.",
+      "自适应唱片与影院墙，支持悬停预览、内封多语字幕与真实音频波形。": "Adaptive vinyl and cinema wall with hover scrubbing, embedded multilingual subtitles, and real audio waveforms.",
+      "按专辑陈列 1:1 唱片封套，配黑胶唱盘、滚动歌词与 10 段均衡器。": "Album-grouped vinyl wall with turntable deck, synced lyrics, and 10-band EQ.",
+      "离线听译与台词检索": "Offline Transcription & Search",
+      "按需用本地 Whisper 生成时间码字幕并接入全局搜索，支持导出 SRT/VTT 与笔记。": "Transcribe audio and video locally on demand with searchable cues and SRT/VTT/Markdown export.",
+      "拉片分镜与无损快剪": "Storyboards & Lossless Trim",
+      "16:9 影院墙配无损秒切、自动镜头分镜拆解与高清故事板，支持不入库直出。": "Widescreen film wall with lossless trimming, automatic scene detection, and HD storyboards.",
+      "放映室视频播放器": "Cine Room Player",
+      "黑胶台音频播放器": "Vinyl Deck Audio"
+    }
+  }
+}

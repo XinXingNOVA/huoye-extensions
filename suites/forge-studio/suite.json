@@ -1,0 +1,294 @@
+{
+  "formatVersion": 1,
+  "id": "forge-studio",
+  "title": "效率魔方",
+  "version": "0.1.0",
+  "description": "离线批量加工三件套：图片与音视频格式转换压制、长图拼接与暗房联系表/PDF 画册、九宫格切图与游戏精灵图合图，均支持不入库直出。",
+  "packages": [
+    "packages/format-forge.hyplugin",
+    "packages/sheet-studio.hyplugin",
+    "packages/sprite-slicer.hyplugin",
+    "packages/image-audit.hyplugin",
+    "packages/loupe-viewer.hyplugin",
+    "packages/svg-studio.hyplugin",
+    "packages/psd-studio.hyplugin",
+    "packages/palette.hyplugin",
+    "packages/collection.hyplugin",
+    "packages/tags.hyplugin",
+    "packages/tag-groups.hyplugin",
+    "packages/rating.hyplugin",
+    "packages/note.hyplugin",
+    "packages/table.hyplugin"
+  ],
+  "presets": [
+    {
+      "id": "forge-studio",
+      "recommendedTheme": "silver-gelatin",
+      "title": "效率魔方 · 批转、画册与切图",
+      "description": "轻量直达三大批处理工坊，适合高频转码、出联系表与切图交付。",
+      "plugins": [
+        "preview",
+        "image",
+        "video",
+        "audio",
+        "pdf",
+        "text",
+        "format-forge",
+        "sheet-studio",
+        "sprite-slicer",
+        "palette",
+        "collection",
+        "tags",
+        "tag-groups",
+        "rating",
+        "note",
+        "table"
+      ],
+      "layout": {
+        "version": 1,
+        "root": {
+          "type": "group",
+          "id": "main"
+        },
+        "primary": "main",
+        "panels": {
+          "sidebar": true,
+          "inspector": true
+        },
+        "panelSizes": {
+          "sidebar": 256,
+          "inspector": 320
+        },
+        "sidebars": {
+          "version": 4,
+          "containers": [
+            {
+              "id": "host.navigation",
+              "side": "left",
+              "type": "tabs",
+              "views": [
+                "host.navigation"
+              ],
+              "active": "host.navigation"
+            },
+            {
+              "id": "host.inspector",
+              "side": "right",
+              "type": "tabs",
+              "views": [
+                "host.inspector"
+              ],
+              "active": "host.inspector"
+            }
+          ],
+          "selected": {
+            "left": "host.navigation",
+            "right": "host.inspector"
+          },
+          "hidden": [],
+          "weights": {
+            "host.navigation": 1,
+            "host.inspector": 1
+          }
+        },
+        "contents": {
+          "main": {
+            "items": [
+              {
+                "kind": "page",
+                "type": "collection",
+                "target": {
+                  "presetId": "all"
+                },
+                "presentation": {
+                  "layout": "masonry",
+                  "options": {},
+                  "zoom": 230
+                }
+              }
+            ],
+            "active": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "forge-pro",
+      "recommendedTheme": "silver-gelatin",
+      "title": "制作全能台 · 批转 + 审计 + 精审",
+      "description": "叠加图形审计、画师精审与 PSD/SVG 工坊，打通质检到批量交付全流程。",
+      "plugins": [
+        "preview",
+        "image",
+        "video",
+        "audio",
+        "pdf",
+        "text",
+        "format-forge",
+        "sheet-studio",
+        "sprite-slicer",
+        "image-audit",
+        "loupe-viewer",
+        "svg-studio",
+        "psd-studio",
+        "palette",
+        "collection",
+        "tags",
+        "tag-groups",
+        "rating",
+        "note",
+        "table"
+      ],
+      "layout": {
+        "version": 1,
+        "root": {
+          "type": "group",
+          "id": "main"
+        },
+        "primary": "main",
+        "panels": {
+          "sidebar": true,
+          "inspector": true
+        },
+        "panelSizes": {
+          "sidebar": 260,
+          "inspector": 336
+        },
+        "sidebars": {
+          "version": 4,
+          "containers": [
+            {
+              "id": "host.navigation",
+              "side": "left",
+              "type": "tabs",
+              "views": [
+                "host.navigation"
+              ],
+              "active": "host.navigation"
+            },
+            {
+              "id": "host.context",
+              "side": "right",
+              "type": "context",
+              "views": [],
+              "active": "",
+              "contexts": {
+                "collection": {
+                  "tools": [
+                    "host.filters",
+                    "image-audit.panel"
+                  ],
+                  "active": "image-audit.panel"
+                }
+              }
+            },
+            {
+              "id": "host.inspector",
+              "side": "right",
+              "type": "tabs",
+              "views": [
+                "host.inspector"
+              ],
+              "active": "host.inspector"
+            }
+          ],
+          "selected": {
+            "left": "host.navigation",
+            "right": "host.context"
+          },
+          "hidden": [],
+          "weights": {
+            "host.navigation": 1,
+            "host.context": 0.54,
+            "host.inspector": 0.46
+          }
+        },
+        "contents": {
+          "main": {
+            "items": [
+              {
+                "kind": "page",
+                "type": "collection",
+                "target": {
+                  "presetId": "all"
+                },
+                "presentation": {
+                  "layout": "masonry",
+                  "options": {},
+                  "zoom": 230
+                }
+              },
+              {
+                "kind": "page",
+                "type": "collection",
+                "target": {
+                  "presetId": "image-audit.non-pot"
+                },
+                "presentation": {
+                  "layout": "masonry",
+                  "options": {},
+                  "zoom": 220
+                }
+              },
+              {
+                "kind": "page",
+                "type": "collection",
+                "target": {
+                  "presetId": "image-audit.ai-generated"
+                },
+                "presentation": {
+                  "layout": "masonry",
+                  "options": {},
+                  "zoom": 220
+                }
+              }
+            ],
+            "active": 0
+          }
+        }
+      }
+    }
+  ],
+  "locales": {
+    "en": {
+      "效率魔方 · 格式转换、画册联系表与切图工坊套件": "Forge Studio · Batch Converter, Contact Sheet & Sprite Suite",
+      "面向设计师、摄影师与游戏美术的一站式离线批量生产套件：集「格式魔方」（批量压图、WebP/JPEG/PNG/多帧 ICO 转换、游戏贴图 POT 对齐与音视频 FFmpeg 转码/调色板 GIF/响度统一）、「画册与联系表工坊」（长图无缝拼接、暗房联系表与原生多页中文 PDF 画册）、「切图与精灵图工坊」（九宫格/自定义网格切图、透明空瓦片跳过与游戏 POT Sprite Sheet 合图/TexturePacker & CSS 坐标表）于一体，并可选联动图形审计、画师精审与矢量/PSD 工坊形成全链路闭环。": "All-in-one offline batch production suite for designers, photographers, and game artists: unites Format Forge (batch image optimization, WebP/JPEG/PNG/multi-size ICO, POT texture alignment & FFmpeg video/audio transcoding, palette GIF, EBU R128 loudnorm), Sheet Studio (seamless long-image stitching, darkroom contact sheets & native multi-page PDF albums), and Sprite Slicer (grid slicing, transparent-tile skipping & POT Sprite Sheets with TexturePacker/CSS coordinates), optionally paired with Image Audit, Loupe Viewer, SVG Studio, and PSD Studio.",
+      "效率魔方 · 批转、画册与切图": "Forge Studio · Convert, Sheets & Sprites",
+      "轻量聚焦的生产力工作台：启用格式魔方（图片/视频/音频批量转换与压图）、画册与联系表工坊（长图拼接/暗房联系表/PDF 画册）、切图与精灵图工坊（九宫格切图与游戏 Sprite Sheet）以及色板、标签、评分、笔记与表格配套工具，开箱即可高速批处理素材。": "Focused batch production workspace enabling Format Forge (image/video/audio conversion & compression), Sheet Studio (stitching, contact sheets & PDF albums), and Sprite Slicer (grid slicing & game sprite sheets) alongside palette, tags, rating, notes, and table companions.",
+      "全能制作工坊 · 批转 + 画册 + 切图 + 审计 + 精审": "Forge Pro · Convert + Sheets + Sprites + Audit + Loupe",
+      "在效率魔方基础上叠加图形审计（POT/EXIF/AI 咒语/直方图）、画师精审看图与对比台、矢量图标工坊与 PSD 图层工坊。右侧智能上下文容器常驻「色彩审计」与「筛选」，主区附「非 POT 贴图检查」视图，打通「审计发现问题 → 格式魔方批量转正 → 画册/切图交付」全链路闭环。": "Full production workbench adding Image Audit (POT/EXIF/AI prompts/histograms), Loupe Viewer, SVG Vector Studio, and PSD Layer Studio, with Color Audit and Non-POT Texture Inspection views forming a complete audit-to-delivery pipeline.",
+      "preview": "Previews",
+      "image": "Image",
+      "video": "Video",
+      "audio": "Audio",
+      "pdf": "PDF",
+      "text": "Text",
+      "预览": "Previews",
+      "图片": "Image",
+      "视频": "Video",
+      "音频": "Audio",
+      "PDF": "PDF",
+      "文字": "Text",
+      "格式魔方 · 批量格式转换与压图工坊": "Format Forge · Batch Converter & Image Optimizer",
+      "画册与联系表工坊": "Sheet Studio",
+      "切图与精灵图工坊": "Sprite Slicer",
+      "图形审计": "Image Audit",
+      "画师精审看图与对比台": "Loupe Viewer",
+      "矢量图标工坊": "SVG Studio",
+      "PSD 图层工坊": "PSD Layer Studio",
+      "色彩与色板": "Colors and palettes",
+      "组": "Folders",
+      "标签基础": "Tags",
+      "标签分组": "Tag groups",
+      "评分": "Rating",
+      "笔记": "Notes",
+      "表格": "Table",
+      "效率魔方": "Forge Studio",
+      "离线批量加工三件套：图片与音视频格式转换压制、长图拼接与暗房联系表/PDF 画册、九宫格切图与游戏精灵图合图，均支持不入库直出。": "Offline batch production trio: image/media format conversion, long-image stitching and contact sheets/PDF albums, and grid slicing/sprite sheets — all with direct-to-disk export.",
+      "轻量直达三大批处理工坊，适合高频转码、出联系表与切图交付。": "Streamlined workspace for fast format conversion, contact sheets, and sprite slicing.",
+      "制作全能台 · 批转 + 审计 + 精审": "Forge Pro · Convert + Audit + Loupe",
+      "叠加图形审计、画师精审与 PSD/SVG 工坊，打通质检到批量交付全流程。": "Adds Image Audit, Loupe Viewer, PSD, and SVG tools for end-to-end QA and delivery.",
+      "格式魔方": "Format Forge"
+    }
+  }
+}

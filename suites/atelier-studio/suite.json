@@ -1,0 +1,390 @@
+{
+  "formatVersion": 1,
+  "id": "atelier-studio",
+  "title": "画室精审",
+  "version": "0.1.0",
+  "description": "面向画师与摄影师的离线看图与灵感工作台：随机洗牌与色彩光谱漫游、暗房级逐像素精审与多图卷帘对比，内置直方图、EXIF 与 AI 生成参数检索。",
+  "packages": [
+    "packages/image-audit.hyplugin",
+    "packages/creative-browse.hyplugin",
+    "packages/loupe-viewer.hyplugin",
+    "packages/visual-search.hyplugin",
+    "packages/embed-apple.hyplugin",
+    "packages/embed-classic.hyplugin",
+    "packages/embed-clip.hyplugin",
+    "packages/vision-studio.hyplugin",
+    "packages/vision-apple.hyplugin",
+    "packages/pureboard.hyplugin",
+    "packages/palette.hyplugin",
+    "packages/annotate.hyplugin",
+    "packages/collection.hyplugin",
+    "packages/tags.hyplugin",
+    "packages/tag-groups.hyplugin",
+    "packages/rating.hyplugin",
+    "packages/note.hyplugin",
+    "packages/table.hyplugin"
+  ],
+  "presets": [
+    {
+      "id": "atelier-studio",
+      "recommendedTheme": "silver-gelatin",
+      "title": "画室精审 · 漫游、审计与看图",
+      "description": "灵感漫游墙配色彩审计与相似灵感侧栏，专注选片、看图与构图比对。",
+      "plugins": [
+        "preview",
+        "image",
+        "image-audit",
+        "creative-browse",
+        "loupe-viewer",
+        "visual-search",
+        "embed-apple",
+        "pureboard",
+        "palette",
+        "annotate",
+        "collection",
+        "tags",
+        "tag-groups",
+        "rating",
+        "note",
+        "table"
+      ],
+      "layout": {
+        "version": 1,
+        "root": {
+          "type": "group",
+          "id": "main"
+        },
+        "primary": "main",
+        "panels": {
+          "sidebar": true,
+          "inspector": true
+        },
+        "panelSizes": {
+          "sidebar": 260,
+          "inspector": 336
+        },
+        "sidebars": {
+          "version": 4,
+          "containers": [
+            {
+              "id": "host.navigation",
+              "side": "left",
+              "type": "tabs",
+              "views": [
+                "host.navigation"
+              ],
+              "active": "host.navigation"
+            },
+            {
+              "id": "host.context",
+              "side": "right",
+              "type": "context",
+              "views": [],
+              "active": "",
+              "contexts": {
+                "collection": {
+                  "tools": [
+                    "host.filters",
+                    "image-audit.panel",
+                    "visual-search.similar-panel"
+                  ],
+                  "active": "image-audit.panel"
+                }
+              }
+            },
+            {
+              "id": "host.inspector",
+              "side": "right",
+              "type": "tabs",
+              "views": [
+                "host.inspector"
+              ],
+              "active": "host.inspector"
+            }
+          ],
+          "selected": {
+            "left": "host.navigation",
+            "right": "host.context"
+          },
+          "hidden": [],
+          "weights": {
+            "host.navigation": 1,
+            "host.context": 0.54,
+            "host.inspector": 0.46
+          }
+        },
+        "contents": {
+          "main": {
+            "items": [
+              {
+                "kind": "page",
+                "type": "collection",
+                "target": {
+                  "presetId": "all"
+                },
+                "presentation": {
+                  "layout": "creative-browse.wall",
+                  "options": {
+                    "mode": "shuffle",
+                    "seed": 1024,
+                    "spectrumBy": "hue",
+                    "aspectDir": "wide",
+                    "showBadges": true,
+                    "gap": 10
+                  },
+                  "zoom": 210
+                }
+              },
+              {
+                "kind": "page",
+                "type": "collection",
+                "target": {
+                  "presetId": "image-audit.ai-generated"
+                },
+                "presentation": {
+                  "layout": "masonry",
+                  "options": {},
+                  "zoom": 230
+                }
+              },
+              {
+                "kind": "page",
+                "type": "collection",
+                "target": {
+                  "presetId": "image-audit.camera-exif"
+                },
+                "presentation": {
+                  "layout": "masonry",
+                  "options": {},
+                  "zoom": 230
+                }
+              },
+              {
+                "kind": "page",
+                "type": "collection",
+                "target": {
+                  "presetId": "visual-search.indexed"
+                },
+                "presentation": {
+                  "layout": "masonry",
+                  "options": {},
+                  "zoom": 220
+                }
+              }
+            ],
+            "active": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "atelier-complete",
+      "recommendedTheme": "silver-gelatin",
+      "title": "创作者全套 · 精审 + 搜图 + 识字抠图",
+      "description": "在画室精审基础上同时启用以图搜图、实况文本 OCR 与一键主体抠图。",
+      "plugins": [
+        "preview",
+        "image",
+        "text",
+        "image-audit",
+        "creative-browse",
+        "loupe-viewer",
+        "visual-search",
+        "embed-apple",
+        "vision-studio",
+        "vision-apple",
+        "pureboard",
+        "palette",
+        "annotate",
+        "collection",
+        "tags",
+        "tag-groups",
+        "rating",
+        "note",
+        "table"
+      ],
+      "layout": {
+        "version": 1,
+        "root": {
+          "type": "group",
+          "id": "main"
+        },
+        "primary": "main",
+        "panels": {
+          "sidebar": true,
+          "inspector": true
+        },
+        "panelSizes": {
+          "sidebar": 276,
+          "inspector": 330
+        },
+        "sidebars": {
+          "version": 4,
+          "containers": [
+            {
+              "id": "host.navigation",
+              "side": "left",
+              "type": "tabs",
+              "views": [
+                "host.navigation"
+              ],
+              "active": "host.navigation"
+            },
+            {
+              "id": "host.context",
+              "side": "left",
+              "type": "context",
+              "views": [],
+              "active": "",
+              "contexts": {
+                "collection": {
+                  "tools": [
+                    "host.filters",
+                    "image-audit.panel",
+                    "visual-search.similar-panel"
+                  ],
+                  "active": "visual-search.similar-panel"
+                }
+              }
+            },
+            {
+              "id": "host.inspector",
+              "side": "right",
+              "type": "tabs",
+              "views": [
+                "host.inspector"
+              ],
+              "active": "host.inspector"
+            }
+          ],
+          "selected": {
+            "left": "host.navigation",
+            "right": "host.inspector"
+          },
+          "hidden": [],
+          "weights": {
+            "host.navigation": 0.44,
+            "host.context": 0.56,
+            "host.inspector": 1
+          }
+        },
+        "contents": {
+          "main": {
+            "items": [
+              {
+                "kind": "page",
+                "type": "collection",
+                "target": {
+                  "presetId": "all"
+                },
+                "presentation": {
+                  "layout": "creative-browse.wall",
+                  "options": {
+                    "mode": "shuffle",
+                    "seed": 1024,
+                    "spectrumBy": "hue",
+                    "aspectDir": "wide",
+                    "showBadges": true,
+                    "gap": 10
+                  },
+                  "zoom": 210
+                }
+              },
+              {
+                "kind": "page",
+                "type": "collection",
+                "target": {
+                  "presetId": "image-audit.ai-generated"
+                },
+                "presentation": {
+                  "layout": "masonry",
+                  "options": {},
+                  "zoom": 230
+                }
+              },
+              {
+                "kind": "page",
+                "type": "collection",
+                "target": {
+                  "presetId": "visual-search.indexed"
+                },
+                "presentation": {
+                  "layout": "masonry",
+                  "options": {},
+                  "zoom": 220
+                }
+              },
+              {
+                "kind": "page",
+                "type": "collection",
+                "target": {
+                  "presetId": "vision-studio.with-text"
+                },
+                "presentation": {
+                  "layout": "masonry",
+                  "options": {},
+                  "zoom": 220
+                }
+              },
+              {
+                "kind": "page",
+                "type": "collection",
+                "target": {
+                  "presetId": "vision-studio.cutouts"
+                },
+                "presentation": {
+                  "layout": "masonry",
+                  "options": {},
+                  "zoom": 210
+                }
+              }
+            ],
+            "active": 0
+          }
+        }
+      }
+    }
+  ],
+  "locales": {
+    "en": {
+      "画室精审 · 灵感漫游、图像审计与视觉工坊套件": "Atelier Studio · Inspiration Browsing, Image Audit & Vision Suite",
+      "面向画师、摄影师与技术美术的完整离线创作工作台：集成图形审计（RGB/明度直方图、极坐标色盘、像素吸管、游戏贴图 POT/4 倍数显存质检、相机 EXIF/GPS 与 AI 咒语全文检索）、创意漫游（随机灵感洗牌、色彩光谱长河、视觉相似度串联与画幅节奏）、画师精审看图与多图对比台（镜像/灰度/三分构图/像素网格/2–4 图同步与卷帘对比/速写定时练习），并深度联动灵图检索与灵眸视觉（Apple Vision 本机神经引擎默认开箱即用，Chinese-CLIP 中文语义引擎与经典视觉特征引擎随套预装，可随时热切换开启中英文自然语言文搜图）。": "Complete offline creative workstation for artists, photographers, and technical artists: combines Image Audit (RGB/Luma histograms, polar color wheel, pixel eyedropper, game texture POT/4x VRAM checks, camera EXIF/GPS & AI prompt full-text search), Creative Browse (seeded shuffle, color spectrum river, visual similarity chain & aspect rhythm), and Loupe Viewer (mirror/grayscale/composition guides/pixel grid, 2–4 image sync & split compare, timed gesture practice), seamlessly integrated with Visual Search and Vision Studio (Apple Vision engines enabled out of the box, with Chinese-CLIP bilingual text-to-image and Classic engines bundled locally for hot-swapping).",
+      "画室精审 · 灵感漫游、审计与精审": "Atelier Studio · Creative Browse, Image Audit & Loupe",
+      "默认启用图形审计、创意漫游、画师精审看图与对比台、灵图检索及 Apple Vision 视觉特征引擎（单引擎自动装配，零配置开箱即用；Chinese-CLIP 中文语义引擎与经典视觉特征引擎随套件预装，导入官方运行包并一键切换即可开启中英文文搜图与图文混搜）。主视图直接开启创意漫游灵感墙，并附 AI 生成图库、相机 EXIF 照片与视觉索引视图；右侧智能上下文容器常驻「色彩审计」与「相似灵感」。": "Enables Image Audit, Creative Browse, Loupe Viewer, Visual Search, and the Apple Vision embedding engine out of the box (Chinese-CLIP bilingual text-to-image and Classic engines bundled locally for one-click switching). Opens directly into the Creative Browse inspiration wall alongside AI Gallery, Camera EXIF, and Visual Index tabs, with Color Audit and Similar Inspiration docked in the smart context sidebar.",
+      "创作者大满贯 · 搜图 + 识字 + 抠图 + 审计 + 精审": "Creator Grand Slam · Search + OCR + Cutout + Audit + Loupe",
+      "一站汇聚灵图检索（以图搜图、文搜图与重复清理）、灵眸视觉（实况文本 OCR 全文检索与一键透明抠图）、图形审计（直方图/EXIF/AI 咒语/POT 质检）、创意漫游（灵感排序墙）与画师精审看图对比台。默认启用 Apple Vision 双本机引擎（Chinese-CLIP 中文语义引擎与经典视觉特征引擎随套预装，可随时热切换），零配置开箱即用。": "All-in-one creator workbench uniting Visual Search (image & text-to-image search), Vision Studio (Live Text OCR & one-click cutouts), Image Audit, Creative Browse, and Loupe Viewer on dual Apple Vision on-device engines out of the box (Chinese-CLIP and Classic engines bundled locally for hot-swapping), with PureBoard and full library curation tools.",
+      "preview": "Previews",
+      "image": "Image",
+      "text": "Text",
+      "预览": "Previews",
+      "图片": "Image",
+      "文字": "Text",
+      "图形审计": "Image Audit",
+      "创意漫游与灵感排序": "Creative Browse",
+      "画师精审看图与对比台": "Loupe Viewer",
+      "灵图检索": "Visual Search",
+      "Apple Vision 视觉特征引擎": "Apple Vision Embedding Engine",
+      "经典视觉特征引擎": "Classic Visual Feature Engine",
+      "Chinese-CLIP 中文语义视觉引擎": "Chinese-CLIP Semantic Visual Engine",
+      "灵眸视觉": "Vision Studio",
+      "Apple Vision 视觉引擎": "Apple Vision Engine",
+      "灵感参考板": "PureBoard",
+      "色彩与色板": "Colors and palettes",
+      "批注": "Annotations",
+      "组": "Folders",
+      "标签基础": "Tags",
+      "标签分组": "Tag groups",
+      "评分": "Rating",
+      "笔记": "Notes",
+      "表格": "Table",
+      "画室精审": "Atelier Studio",
+      "面向画师与摄影师的离线看图与灵感工作台：随机洗牌与色彩光谱漫游、暗房级逐像素精审与多图卷帘对比，内置直方图、EXIF 与 AI 生成参数检索。": "Offline visual review studio for artists and photographers: seeded shuffle and color-spectrum browsing, darkroom loupe with synced 2–4 image wipe comparison, plus histograms, EXIF, and AI prompt search.",
+      "画室精审 · 漫游、审计与看图": "Atelier Studio · Browse, Audit & Loupe",
+      "灵感漫游墙配色彩审计与相似灵感侧栏，专注选片、看图与构图比对。": "Creative Browse wall paired with Color Audit and Similar Inspiration sidebars for focused visual review.",
+      "创作者全套 · 精审 + 搜图 + 识字抠图": "Creator All-in-One · Loupe + Search + OCR",
+      "在画室精审基础上同时启用以图搜图、实况文本 OCR 与一键主体抠图。": "Adds reverse/text visual search, Live Text OCR, and one-click transparent cutouts to the full Atelier desk.",
+      "Chinese-CLIP 中文语义引擎": "Chinese-CLIP Semantic Engine",
+      "Apple Vision 识字抠图引擎": "Apple Vision OCR & Cutout Engine"
+    }
+  }
+}

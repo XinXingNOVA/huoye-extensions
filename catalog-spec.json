@@ -1,0 +1,687 @@
+{
+  "releaseVersion": "0.1.0",
+  "repo": "XinXingNOVA/huoye-extensions",
+  "repoUrl": "https://github.com/XinXingNOVA/huoye-extensions",
+  "releaseTag": "v0.1.0",
+  "releaseBaseUrl": "https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0",
+  "suites": [
+    {
+      "id": "atelier-studio",
+      "titleZh": "画室精审",
+      "titleEn": "Atelier Studio",
+      "tagZh": "画师 / 摄影 / 美术",
+      "tagEn": "Art / Photo / Review",
+      "platform": "cross-platform",
+      "platformNoteZh": "全平台（视觉引擎在 macOS 默认走 Apple Vision，其他系统可切经典特征）",
+      "platformNoteEn": "Cross-platform (Apple Vision on macOS, Classic engine elsewhere)",
+      "descZh": "面向画师与摄影师的离线看图与灵感工作台：随机洗牌与色彩光谱漫游、暗房级逐像素精审与多图卷帘对比，内置直方图、EXIF 与 AI 生成参数检索。",
+      "descEn": "Offline visual review studio for artists and photographers: seeded shuffle and color-spectrum browsing, darkroom loupe with synced 2–4 image wipe comparison, plus histograms, EXIF, and AI prompt search.",
+      "sources": ["atelier-studio"],
+      "presets": [
+        {
+          "source": "atelier-studio",
+          "id": "atelier-studio",
+          "titleZh": "画室精审 · 漫游、审计与看图",
+          "titleEn": "Atelier Studio · Browse, Audit & Loupe",
+          "descZh": "灵感漫游墙配色彩审计与相似灵感侧栏，专注选片、看图与构图比对。",
+          "descEn": "Creative Browse wall paired with Color Audit and Similar Inspiration sidebars for focused visual review."
+        },
+        {
+          "source": "atelier-studio",
+          "id": "atelier-complete",
+          "titleZh": "创作者全套 · 精审 + 搜图 + 识字抠图",
+          "titleEn": "Creator All-in-One · Loupe + Search + OCR",
+          "descZh": "在画室精审基础上同时启用以图搜图、实况文本 OCR 与一键主体抠图。",
+          "descEn": "Adds reverse/text visual search, Live Text OCR, and one-click transparent cutouts to the full Atelier desk."
+        }
+      ]
+    },
+    {
+      "id": "visual-search",
+      "titleZh": "灵图与灵眸",
+      "titleEn": "Visual Search & Vision",
+      "tagZh": "搜图 / OCR / 抠图",
+      "tagEn": "Search / OCR / Cutout",
+      "platform": "cross-platform",
+      "platformNoteZh": "全平台（macOS 开箱可用 Apple Vision；文搜图需导入 Chinese-CLIP 运行包）",
+      "platformNoteEn": "Cross-platform (Apple Vision on macOS; Chinese-CLIP runtime enables text-to-image)",
+      "descZh": "把以图搜图、中英文自然语言文搜图、视觉去重、实况文本 OCR 与一键透明抠图合在一套，按需挂载或热切换本地视觉引擎。",
+      "descEn": "Unites reverse image search, bilingual text-to-image search, visual deduplication, Live Text OCR, and one-click subject cutouts with hot-swappable local vision engines.",
+      "sources": ["visual-search", "vision-studio"],
+      "extraPackages": ["vision-tesseract"],
+      "presets": [
+        {
+          "source": "visual-search",
+          "id": "visual-search",
+          "titleZh": "灵图检索 · 以图/文搜图与去重",
+          "titleEn": "Visual Search · Similarity & Dedup",
+          "descZh": "以图搜图、外图拖入直搜、相似灵感侧栏与重复连拍清理；配 Chinese-CLIP 运行包可开启中英文文搜图。",
+          "descEn": "Reverse image search, drag-to-search without importing, similar-item sidebar, and duplicate cleanup; add the Chinese-CLIP runtime for text search."
+        },
+        {
+          "source": "vision-studio",
+          "id": "vision-studio",
+          "titleZh": "灵眸视觉 · 实况 OCR 与一键抠图",
+          "titleEn": "Vision Studio · Live Text OCR & Cutout",
+          "descZh": "识别图片文字写入全局搜索、支持直接划选复制，一键抠出透明主体并无损导出。",
+          "descEn": "Index and copy text directly from images, and lift clean transparent subjects for collage or export."
+        },
+        {
+          "source": "visual-search",
+          "id": "visual-ai-studio",
+          "titleZh": "视觉全能台 · 搜图 + 识字 + 抠图",
+          "titleEn": "Full Vision Desk · Search + OCR + Cutout",
+          "descZh": "同时开启视觉检索、实况 OCR、一键抠图与灵感参考板，一套覆盖全部看图需求。",
+          "descEn": "Enables visual search, Live Text OCR, cutouts, and PureBoard together in one workspace."
+        }
+      ]
+    },
+    {
+      "id": "design-studio",
+      "titleZh": "设计工坊",
+      "titleEn": "Design Studio",
+      "tagZh": "字体 / PSD / SVG / 3D",
+      "tagEn": "Fonts / PSD / SVG / 3D",
+      "platform": "cross-platform",
+      "platformNoteZh": "全平台",
+      "platformNoteEn": "Cross-platform",
+      "descZh": "面向品牌与视觉设计的资产工作台：字体试打墙与可变轴、PSD/PSB 图层审稿、SVG 图标调色、3D 模型展台与灵感参考板。",
+      "descEn": "Visual design asset desk featuring a live type specimen wall, local PSD/PSB layer inspection, safe SVG recoloring, WebGL2 3D turntable, and PureBoard.",
+      "sources": ["design-studio"],
+      "presets": [
+        {
+          "source": "design-studio",
+          "id": "studio",
+          "titleZh": "综合设计资产库",
+          "titleEn": "Visual Asset Library",
+          "descZh": "统一管理字体、PSD、SVG、3D 模型与图片参考，按选中类型自动切换工具栏。",
+          "descEn": "Organize fonts, PSDs, SVGs, 3D models, and references with context-aware inspector tools."
+        },
+        {
+          "source": "design-studio",
+          "id": "type-wall",
+          "titleZh": "字体馆 · 试打瀑布流",
+          "titleEn": "Font Studio · Type Wall",
+          "descZh": "直接进入全局同步试打墙，调节字号字距与可变轴，并排比对多款字体。",
+          "descEn": "Open directly into the synchronized type wall with variable axes, specimen views, and side-by-side comparison."
+        },
+        {
+          "source": "design-studio",
+          "id": "catalog",
+          "titleZh": "设计台账 · 规格检索",
+          "titleEn": "Design Ledger · Spec Table",
+          "descZh": "以表格核对字体授权、PSD 尺寸 DPI、SVG 颜色与 3D 面数。",
+          "descEn": "Audit font licenses, PSD dimensions, SVG palettes, and 3D poly counts row by row."
+        }
+      ]
+    },
+    {
+      "id": "reading-library",
+      "titleZh": "青瓷书房",
+      "titleEn": "Celadon Study",
+      "tagZh": "电子书 / 漫画 / 书摘",
+      "tagEn": "Books / Comics / Highlights",
+      "platform": "cross-platform",
+      "platformNoteZh": "全平台",
+      "platformNoteEn": "Cross-platform",
+      "descZh": "一站式个人藏书与精读空间：支持 EPUB、Kindle、PDF、漫画画集与长篇 TXT，配备实体书架、书目台账与书摘回跳。",
+      "descEn": "Personal reading room for EPUB, Kindle, PDF, comics, and long TXT files — with a tactile bookshelf, book catalog table, and highlights that jump back to the exact passage.",
+      "sources": ["reading-library"],
+      "presets": [
+        {
+          "source": "reading-library",
+          "id": "bookshelf",
+          "titleZh": "青瓷书房 · 书架模式",
+          "titleEn": "Celadon Study · Bookshelf",
+          "descZh": "按书架陈列多格式藏书与阅读进度，随阅读自动切出章节目录与批注。",
+          "descEn": "Browse your multi-format library on a bookshelf with reading progress and contextual table of contents."
+        },
+        {
+          "source": "reading-library",
+          "id": "catalog",
+          "titleZh": "书目台账 · 编目模式",
+          "titleEn": "Book Ledger · Catalog Table",
+          "descZh": "按作者、丛书、出版年、ISBN 与阅读状态批量校对，附年度书墙。",
+          "descEn": "Curate authors, series, years, ISBNs, and reading status in a table alongside the Year Wall."
+        },
+        {
+          "source": "reading-library",
+          "id": "study",
+          "titleZh": "精读与书摘工作台",
+          "titleEn": "Deep Reading & Highlights",
+          "descZh": "以书摘馆与每日回顾为核心，所有摘录均可一键跳回原书高亮位置。",
+          "descEn": "Centers on the Highlights Hub and daily review, with one-click jump back to the source passage."
+        }
+      ]
+    },
+    {
+      "id": "media-studio",
+      "titleZh": "黑胶放映与听译",
+      "titleEn": "Screening & Transcript Studio",
+      "tagZh": "拉片 / 黑胶 / 听译 / 快剪",
+      "tagEn": "Film / Vinyl / Subtitles / Cut",
+      "platform": "cross-platform",
+      "platformNoteZh": "全平台（离线语音听译需导入 Whisper 运行包）",
+      "platformNoteEn": "Cross-platform (offline transcription requires the Whisper runtime)",
+      "descZh": "将放映室、黑胶台、离线语音听译与视频无损快剪合为一套：逐帧拉片、黑胶听音、搜台词直达原声与自动分镜剪辑按预设切换。",
+      "descEn": "Combines Cine Room, Vinyl Deck, offline Whisper transcription, and lossless clip cutting — switch presets between film study, Hi-Fi listening, subtitle search, and storyboard trimming.",
+      "sources": ["media-studio", "audio-video-ai"],
+      "presets": [
+        {
+          "source": "media-studio",
+          "id": "cinema",
+          "titleZh": "黑胶放映室 · 综合影音",
+          "titleEn": "Screening Room · All Media",
+          "descZh": "自适应唱片与影院墙，支持悬停预览、内封多语字幕与真实音频波形。",
+          "descEn": "Adaptive vinyl and cinema wall with hover scrubbing, embedded multilingual subtitles, and real audio waveforms."
+        },
+        {
+          "source": "media-studio",
+          "id": "vinyl",
+          "titleZh": "黑胶唱片馆 · 音乐专注",
+          "titleEn": "Vinyl Hall · Hi-Fi Music",
+          "descZh": "按专辑陈列 1:1 唱片封套，配黑胶唱盘、滚动歌词与 10 段均衡器。",
+          "descEn": "Album-grouped vinyl wall with turntable deck, synced lyrics, and 10-band EQ."
+        },
+        {
+          "source": "audio-video-ai",
+          "id": "transcript-studio",
+          "titleZh": "离线听译与台词检索",
+          "titleEn": "Offline Transcription & Search",
+          "descZh": "按需用本地 Whisper 生成时间码字幕并接入全局搜索，支持导出 SRT/VTT 与笔记。",
+          "descEn": "Transcribe audio and video locally on demand with searchable cues and SRT/VTT/Markdown export."
+        },
+        {
+          "source": "audio-video-ai",
+          "id": "clip-workbench",
+          "titleZh": "拉片分镜与无损快剪",
+          "titleEn": "Storyboards & Lossless Trim",
+          "descZh": "16:9 影院墙配无损秒切、自动镜头分镜拆解与高清故事板，支持不入库直出。",
+          "descEn": "Widescreen film wall with lossless trimming, automatic scene detection, and HD storyboards."
+        }
+      ]
+    },
+    {
+      "id": "doc-studio",
+      "titleZh": "办公与档案工坊",
+      "titleEn": "Documents & Archives Studio",
+      "tagZh": "Office / PDF / 压缩包 / 表格",
+      "tagEn": "Office / PDF / Archives / Data",
+      "platform": "cross-platform",
+      "platformNoteZh": "全平台（其中 PDF 手术台依赖 macOS 原生 PDFKit）",
+      "platformNoteEn": "Cross-platform (PDF Forge uses macOS PDFKit)",
+      "descZh": "面向日常文档、数据表与归档包的全离线工作台：直读 Word/PPT/RTF 与全文检索、PDF 合并拆分水印、压缩包免解压检索以及十万行表格分析。",
+      "descEn": "Offline desk for office files, spreadsheets, and archives: Word/PPT/RTF reading and full-text search, PDF surgery, no-extract archive peeking, and 100k-row data tables.",
+      "sources": ["doc-studio", "archive-data"],
+      "presets": [
+        {
+          "source": "doc-studio",
+          "id": "office-reading",
+          "titleZh": "文档精读与全文检索",
+          "titleEn": "Document Reading & Search",
+          "descZh": "阅读 DOCX、PPTX、RTF 与 PDF，正文与演讲者备注自动进入全局全文搜索。",
+          "descEn": "Read Word, PowerPoint, RTF, and PDF with automatic full-text indexing of body text and speaker notes."
+        },
+        {
+          "source": "doc-studio",
+          "id": "pdf-workbench",
+          "titleZh": "PDF 手术与批量加工",
+          "titleEn": "PDF Surgery & Finishing",
+          "descZh": "合并、重排、拆分、中文矢量水印与高清转图，支持入库或直接导出到本地。",
+          "descEn": "Merge, reorder, split, watermark, and render PDFs — save to the library or export straight to disk."
+        },
+        {
+          "source": "archive-data",
+          "id": "archive-data",
+          "titleZh": "压缩包透视与表格分析",
+          "titleEn": "Archive Peek & Data Tables",
+          "descZh": "免解压直搜 ZIP/TAR 内部文件并按需提取，内置 CSV/XLSX/JSON 虚拟表格与图表。",
+          "descEn": "Search and extract files inside ZIP/TAR without unpacking, plus fast CSV/XLSX/JSON tables and charts."
+        }
+      ]
+    },
+    {
+      "id": "forge-studio",
+      "titleZh": "效率魔方",
+      "titleEn": "Forge Studio",
+      "tagZh": "批转 / 联系表 / 切图",
+      "tagEn": "Convert / Sheets / Sprites",
+      "platform": "cross-platform",
+      "platformNoteZh": "全平台",
+      "platformNoteEn": "Cross-platform",
+      "descZh": "离线批量加工三件套：图片与音视频格式转换压制、长图拼接与暗房联系表/PDF 画册、九宫格切图与游戏精灵图合图，均支持不入库直出。",
+      "descEn": "Offline batch production trio: image/media format conversion, long-image stitching and contact sheets/PDF albums, and grid slicing/sprite sheets — all with direct-to-disk export.",
+      "sources": ["forge-studio"],
+      "presets": [
+        {
+          "source": "forge-studio",
+          "id": "forge-studio",
+          "titleZh": "效率魔方 · 批转、画册与切图",
+          "titleEn": "Forge Studio · Convert, Sheets & Sprites",
+          "descZh": "轻量直达三大批处理工坊，适合高频转码、出联系表与切图交付。",
+          "descEn": "Streamlined workspace for fast format conversion, contact sheets, and sprite slicing."
+        },
+        {
+          "source": "forge-studio",
+          "id": "forge-pro",
+          "titleZh": "制作全能台 · 批转 + 审计 + 精审",
+          "titleEn": "Forge Pro · Convert + Audit + Loupe",
+          "descZh": "叠加图形审计、画师精审与 PSD/SVG 工坊，打通质检到批量交付全流程。",
+          "descEn": "Adds Image Audit, Loupe Viewer, PSD, and SVG tools for end-to-end QA and delivery."
+        }
+      ]
+    },
+    {
+      "id": "vault-insight",
+      "titleZh": "仓库洞察",
+      "titleEn": "Vault Insight",
+      "tagZh": "关系星图 / 空间体检",
+      "tagEn": "Link Graph / Health Audit",
+      "platform": "cross-platform",
+      "platformNoteZh": "全平台",
+      "platformNoteEn": "Cross-platform",
+      "descZh": "看清大型仓库的脉络与冗余：用交互式关系星图梳理双链、标签与相似素材，用空间树图排查大文件、精确重复项与孤岛资产。",
+      "descEn": "Map and maintain large libraries with an interactive relation graph across links, tags, and similarity, paired with treemap storage analysis and exact duplicate cleanup.",
+      "sources": ["vault-insight"],
+      "presets": [
+        {
+          "source": "vault-insight",
+          "id": "vault-insight",
+          "titleZh": "星图与体检 · 轻量版",
+          "titleEn": "Graph & Health · Light",
+          "descZh": "不依赖视觉模型，启用全局与局部关系星图、空间树图及重复项体检。",
+          "descEn": "Lightweight graph, treemap storage breakdown, and duplicate hygiene without vision models."
+        },
+        {
+          "source": "vault-insight",
+          "id": "vault-insight-visual",
+          "titleZh": "全维星图 · 含视觉相似连线",
+          "titleEn": "Full Graph · With Visual Similarity",
+          "descZh": "联动灵图检索，在关系星图中叠加视觉相似灵感连线。",
+          "descEn": "Links Visual Search to overlay visual-similarity edges inside the relation graph."
+        }
+      ]
+    }
+  ],
+  "runtimes": [
+    {
+      "id": "huoye-cn-clip",
+      "sourceFile": "runtimes/huoye-cn-clip-1.0.0-darwin-arm64.hyruntime",
+      "outputFile": "huoye-cn-clip-0.1.0-darwin-arm64.hyruntime",
+      "nameZh": "Chinese-CLIP 中文语义视觉运行包",
+      "nameEn": "Chinese-CLIP ViT-B/16 Runtime",
+      "platform": "macos-arm64",
+      "platformLabelZh": "macOS Apple Silicon",
+      "platformLabelEn": "macOS Apple Silicon",
+      "summaryZh": "内置量化 ONNX 模型与原生推理程序，导入一次即可在多个仓库离线开启中英文自然语言文搜图，无需配置 Python。",
+      "summaryEn": "Self-contained quantized ONNX weights and native runner for offline Chinese/English text-to-image search across libraries — zero Python setup.",
+      "usedBy": ["embed-clip", "visual-search", "atelier-studio"]
+    },
+    {
+      "id": "huoye-whisper",
+      "sourceFile": "runtimes/huoye-whisper-1.0.0-darwin-arm64.hyruntime",
+      "outputFile": "huoye-whisper-0.1.0-darwin-arm64.hyruntime",
+      "nameZh": "Whisper 离线语音听译运行包",
+      "nameEn": "Whisper Local Speech Runtime",
+      "platform": "macos-arm64",
+      "platformLabelZh": "macOS Apple Silicon",
+      "platformLabelEn": "macOS Apple Silicon",
+      "summaryZh": "内置 Metal 加速 whisper.cpp 与多语种量化模型，离线把本地音视频转成带时间码的可检索字幕，数据不出本机。",
+      "summaryEn": "Metal-accelerated whisper.cpp with quantized multilingual weights for fully offline timestamped speech transcription.",
+      "usedBy": ["speech-whisper", "whisper-studio", "media-studio"]
+    }
+  ],
+  "themes": [
+    {
+      "id": "hakurei-shrine",
+      "nameZh": "博丽缘侧",
+      "nameEn": "Hakurei Shrine",
+      "descZh": "和纸与朱绯纸垂的午后神社白昼，翻面即入微芒渐染的暗夜结界；附定制图标与细腻背景纹理。",
+      "descEn": "Warm washi paper and vermilion accents by day, deep twilight shrine tones by night — complete with custom icons and subtle textures."
+    }
+  ],
+  "plugins": [
+    {
+      "id": "creative-browse",
+      "titleZh": "创意漫游与灵感排序",
+      "titleEn": "Creative Browse",
+      "category": "visual",
+      "platform": "cross-platform",
+      "descZh": "以随机种子洗牌、色彩光谱长河、视觉相似度串联与画幅节奏重新浏览图库，适合找灵感与挑片。",
+      "descEn": "Explore image libraries via seeded shuffle, color spectrum rivers, similarity chains, and aspect-ratio rhythm."
+    },
+    {
+      "id": "image-audit",
+      "titleZh": "图形审计",
+      "titleEn": "Image Audit",
+      "category": "visual",
+      "platform": "cross-platform",
+      "descZh": "查看 RGB/明度直方图、极坐标色盘、像素吸管、贴图对齐质检、相机 EXIF，并自动索引 AI 生图参数。",
+      "descEn": "Inspect histograms, polar color wheels, pixel values, texture alignment, camera EXIF, and indexed AI generation prompts."
+    },
+    {
+      "id": "loupe-viewer",
+      "titleZh": "画师精审看图与对比台",
+      "titleEn": "Loupe Viewer",
+      "category": "visual",
+      "platform": "cross-platform",
+      "descZh": "暗房级看图与选片台：像素网格、镜像灰度、构图参考线、2–4 图同步卷帘对比与速写定时轮播。",
+      "descEn": "Darkroom loupe with pixel grid, mirror/grayscale checks, composition guides, synced 2–4 image wipe compare, and timed gesture practice."
+    },
+    {
+      "id": "pureboard",
+      "titleZh": "灵感参考板",
+      "titleEn": "PureBoard",
+      "category": "visual",
+      "platform": "cross-platform",
+      "descZh": "无限画布参考板：自由摆放、旋转裁切、吸色便签、紧凑排布，并可撕出为无框置顶小窗。",
+      "descEn": "Infinite reference canvas with rotation, cropping, eyedropper, notes, auto-packing, and frameless always-on-top floating windows."
+    },
+    {
+      "id": "vision-studio",
+      "titleZh": "灵眸视觉",
+      "titleEn": "Vision Studio",
+      "category": "visual",
+      "platform": "cross-platform",
+      "descZh": "实况文本 OCR 与一键透明主体抠图工作台：图片文字直接入全局搜索与划选复制，抠图原分辨率导出。",
+      "descEn": "Live Text OCR and one-click subject cutout desk: search and copy text inside images and export full-resolution transparent PNGs."
+    },
+    {
+      "id": "visual-search",
+      "titleZh": "灵图检索",
+      "titleEn": "Visual Search",
+      "category": "visual",
+      "platform": "cross-platform",
+      "descZh": "离线以图搜图、中英文自然语言文搜图、外图拖入不入库直搜、相似灵感侧栏与三档视觉去重清理。",
+      "descEn": "Offline reverse image search, bilingual text-to-image search, zero-ingest drag search, similar-item sidebar, and visual deduplication."
+    },
+    {
+      "id": "font-studio",
+      "titleZh": "字体馆",
+      "titleEn": "Font Studio",
+      "category": "design",
+      "platform": "cross-platform",
+      "descZh": "支持 TTF/OTF/WOFF/WOFF2 试打墙、可变轴调节、字形表、同屏叠影比对与商用授权记录。",
+      "descEn": "Type specimen wall for TTF/OTF/WOFF/WOFF2 with variable axes, glyph tables, overlay comparison, and license notes."
+    },
+    {
+      "id": "psd-studio",
+      "titleZh": "PSD 图层工坊",
+      "titleEn": "PSD Layer Studio",
+      "category": "design",
+      "platform": "cross-platform",
+      "descZh": "无需 Photoshop 直读 PSD/PSB 图层树与规格，支持图层显隐合成、孤立检视与原分辨率单层导出。",
+      "descEn": "Inspect PSD/PSB layer trees locally without Photoshop, toggle visibility, isolate layers, and export full-res PNGs."
+    },
+    {
+      "id": "svg-studio",
+      "titleZh": "矢量图标工坊",
+      "titleEn": "SVG Studio",
+      "category": "design",
+      "platform": "cross-platform",
+      "descZh": "安全预览 SVG 矢量图形、线框与多尺寸检查、无损换色、源码精简，并一键复制 React/CSS 或转 PNG。",
+      "descEn": "Safe SVG inspection with wireframe and multi-size previews, live recoloring, minification, and React/CSS/PNG export."
+    },
+    {
+      "id": "mesh-viewer",
+      "titleZh": "3D 雕塑展台",
+      "titleEn": "3D Mesh Viewer",
+      "category": "design",
+      "platform": "cross-platform",
+      "descZh": "本地预览 GLB/glTF/STL/OBJ 模型并自动生成棚拍缩略图，提供棚拍/黏土/法线/线框着色与置顶展台。",
+      "descEn": "Preview GLB, glTF, STL, and OBJ models with automatic studio thumbnails, four shading modes, and a floating turntable."
+    },
+    {
+      "id": "epub",
+      "titleZh": "EPUB 阅读器",
+      "titleEn": "EPUB Reader",
+      "category": "reading",
+      "platform": "cross-platform",
+      "descZh": "双页对开与纸张排版 EPUB 精读器，支持护眼主题、脚注浮层、插图灯箱、全书搜索与书摘导出。",
+      "descEn": "Paginated and two-page EPUB reader with paper themes, footnote popovers, image lightbox, full-book search, and note export."
+    },
+    {
+      "id": "ebook-reader",
+      "titleZh": "多格式电子书阅读器",
+      "titleEn": "Multi-Format E-book Reader",
+      "category": "reading",
+      "platform": "cross-platform",
+      "descZh": "离线精读 MOBI/AZW3/KF8、FB2、DOCX 与 MHTML 长文，支持双页对开、全书搜索与语音朗读。",
+      "descEn": "Read MOBI, AZW3, KF8, FB2, DOCX, and MHTML offline with spread layout, full-text search, and read-aloud."
+    },
+    {
+      "id": "txt-reader",
+      "titleZh": "长篇 TXT 精读器",
+      "titleEn": "Long-Form TXT Reader",
+      "category": "reading",
+      "platform": "cross-platform",
+      "descZh": "自动识别编码并切分长篇小说章节，支持双页阅读、目录导航、全书搜索与批注书签。",
+      "descEn": "Auto-detects text encodings and splits chapters for long novels with spread pagination, search, and bookmarks."
+    },
+    {
+      "id": "comic",
+      "titleZh": "漫画与画集阅读器",
+      "titleEn": "Comic & Artbook Reader",
+      "category": "reading",
+      "platform": "cross-platform",
+      "descZh": "直读 CBZ/CBT/CBR 归档与多图画集，支持日漫右翻双页对开、条漫长卷与单页收藏入库。",
+      "descEn": "Read CBZ, CBT, CBR, and image sets in single-page, RTL manga spread, or vertical strip modes with single-page capture."
+    },
+    {
+      "id": "bookshelf",
+      "titleZh": "书架与书房",
+      "titleEn": "Bookshelf & Study",
+      "category": "reading",
+      "platform": "cross-platform",
+      "descZh": "拟真书架浏览布局与书房主页，按状态、作者或丛书陈列藏书，追踪阅读进度与每日书摘。",
+      "descEn": "Tactile bookshelf layout and study home organizing books by status, author, or series alongside reading progress."
+    },
+    {
+      "id": "book-meta",
+      "titleZh": "书目与藏书档案",
+      "titleEn": "Book Metadata",
+      "category": "reading",
+      "platform": "cross-platform",
+      "descZh": "为电子书、PDF 与漫画建立统一书目字段，追踪阅读状态、时长与年度书墙统计。",
+      "descEn": "Unified book catalog fields across ebooks, PDFs, and comics with reading status, time tracking, and a Year Wall."
+    },
+    {
+      "id": "highlights",
+      "titleZh": "书摘馆与每日回顾",
+      "titleEn": "Highlights Hub",
+      "category": "reading",
+      "platform": "cross-platform",
+      "descZh": "汇聚全库读书摘录，支持按书归档、每日翻牌回顾、高清书摘卡片生成与一键跳回原文。",
+      "descEn": "Collects all reading excerpts with daily flashcard review, shareable quote cards, and one-click jump back to source."
+    },
+    {
+      "id": "cine-player",
+      "titleZh": "放映室视频播放器",
+      "titleEn": "Cine Room Player",
+      "category": "media",
+      "platform": "cross-platform",
+      "descZh": "面向拉片与审片的专业播放器：逐帧步进、A-B 循环、内封多语字幕直切、分镜标记与双视频卷帘对比。",
+      "descEn": "Film-study video player with frame stepping, A-B loop, embedded multilingual subtitles, shot markers, and dual-video wipe compare."
+    },
+    {
+      "id": "vinyl-audio",
+      "titleZh": "黑胶台音频播放器",
+      "titleEn": "Vinyl Deck Audio",
+      "category": "media",
+      "platform": "cross-platform",
+      "descZh": "高解析音乐与播客播放器：黑胶唱盘、真实音频波形、双语滚动歌词、10 段均衡器与时间戳书签。",
+      "descEn": "Hi-Fi music and podcast player with turntable animation, real waveforms, synced lyrics, 10-band EQ, and audio bookmarks."
+    },
+    {
+      "id": "media-shelf",
+      "titleZh": "唱片墙与放映厅",
+      "titleEn": "Media Wall & Hub",
+      "category": "media",
+      "platform": "cross-platform",
+      "descZh": "1:1 黑胶封套与 16:9 影院画幅自适应浏览布局，支持视频悬停预览、自动专辑聚合与续播入口。",
+      "descEn": "Adaptive 1:1 vinyl and 16:9 cinema browsing wall with hover video scrubbing, album grouping, and resume cards."
+    },
+    {
+      "id": "whisper-studio",
+      "titleZh": "听译字幕工坊",
+      "titleEn": "Whisper Subtitle Studio",
+      "category": "media",
+      "platform": "cross-platform",
+      "descZh": "按需离线转写音视频对白，字幕全文自动入全局搜索，点词直达对应播放位置并支持导出 SRT/VTT/笔记。",
+      "descEn": "On-demand offline speech transcription with searchable global cues, click-to-seek playback, and SRT/VTT/Markdown export."
+    },
+    {
+      "id": "clip-cutter",
+      "titleZh": "视频分镜与无损快剪",
+      "titleEn": "Clip Cutter",
+      "category": "media",
+      "platform": "cross-platform",
+      "descZh": "时间轴快速设定入出点无损秒切，支持自动镜头分镜拆解与高清故事板，可入库或直接导出到本地。",
+      "descEn": "Lossless timeline trimming, automatic scene breakdown, and HD storyboards — save to your library or export straight to disk."
+    },
+    {
+      "id": "office-lens",
+      "titleZh": "Office 文档透视镜",
+      "titleEn": "Office Lens",
+      "category": "office",
+      "platform": "cross-platform",
+      "descZh": "离线阅读 Word (.docx)、PowerPoint (.pptx) 与中文 RTF，正文与演讲者备注自动入全文搜索，支持转 Markdown 与直出。",
+      "descEn": "Read DOCX, PPTX (with speaker notes), and Chinese RTF offline with automatic full-text search, Markdown capture, and direct export."
+    },
+    {
+      "id": "pdf-forge",
+      "titleZh": "PDF 手术台与精加工",
+      "titleEn": "PDF Forge",
+      "category": "office",
+      "platform": "macos",
+      "descZh": "合并、重排旋转、精准拆分、矢量中文水印、高清转图、多图合 PDF 与大纲文本提取，支持不入库直出。",
+      "descEn": "Merge, reorder, rotate, split, watermark, render, and extract text from PDFs using macOS PDFKit — with library or direct export."
+    },
+    {
+      "id": "archive-peek",
+      "titleZh": "压缩包免解压透视镜",
+      "titleEn": "Archive Peek",
+      "category": "office",
+      "platform": "cross-platform",
+      "descZh": "不解压直接浏览和全文搜索 ZIP/TAR/TAR.GZ 内部文件，即时预览图文并按需提取入库或导出到本地。",
+      "descEn": "Browse and search inside ZIP, TAR, and TAR.GZ archives without unpacking, preview contents, and extract selectively."
+    },
+    {
+      "id": "data-lens",
+      "titleZh": "表格与数据透视镜",
+      "titleEn": "Data Lens",
+      "category": "office",
+      "platform": "cross-platform",
+      "descZh": "流畅浏览十万行 CSV/TSV/XLSX/JSON 数据，提供列分布统计、筛选排序、交互图表生成与多格式互转。",
+      "descEn": "Explore 100k-row CSV, TSV, XLSX, and JSON files with column histograms, filtering, interactive charts, and format export."
+    },
+    {
+      "id": "format-forge",
+      "titleZh": "格式魔方",
+      "titleEn": "Format Forge",
+      "category": "utility",
+      "platform": "cross-platform",
+      "descZh": "批量压图、WebP/JPEG/PNG/ICO 转换、贴图对齐、水印与音视频转码抽帧，支持入库或直接导出到本地。",
+      "descEn": "Batch image compression, format conversion, watermarks, and FFmpeg video/audio transcoding with library or direct export."
+    },
+    {
+      "id": "sheet-studio",
+      "titleZh": "画册与联系表工坊",
+      "titleEn": "Sheet Studio",
+      "category": "utility",
+      "platform": "cross-platform",
+      "descZh": "无缝拼接长图、生成暗房编号联系表（含 EXIF 标注）与多页 PDF 画册，支持入库或直接导出到本地。",
+      "descEn": "Stitch long images, build numbered darkroom contact sheets with EXIF labels, and assemble multi-page PDF albums."
+    },
+    {
+      "id": "sprite-slicer",
+      "titleZh": "切图与精灵图工坊",
+      "titleEn": "Sprite Slicer",
+      "category": "utility",
+      "platform": "cross-platform",
+      "descZh": "九宫格/自定义网格批量切图、自动跳过空瓦片，以及游戏 Sprite Sheet 合图与动画预览，支持不入库直出。",
+      "descEn": "Slice grids with empty-tile skipping and pack game sprite sheets with animation preview and TexturePacker/CSS coordinates."
+    },
+    {
+      "id": "link-graph",
+      "titleZh": "资产关系星图",
+      "titleEn": "Link Graph",
+      "category": "utility",
+      "platform": "cross-platform",
+      "descZh": "汇聚双链引用、批注、分组、标签与视觉相似关系，以交互力导向星图与局部侧栏检出关联和孤岛素材。",
+      "descEn": "Interactive force-directed graph uniting links, annotations, folders, tags, and visual similarity, with local sidebar and orphan detection."
+    },
+    {
+      "id": "vault-doctor",
+      "titleZh": "仓库体检仪",
+      "titleEn": "Vault Doctor",
+      "category": "utility",
+      "platform": "cross-platform",
+      "descZh": "用矩形树图分析空间占用，精确排查重复文件、加工失败项与孤立批注，并一键压缩回收数据库空间。",
+      "descEn": "Treemap storage analyzer with exact duplicate detection, failed-task retry, orphan diagnostics, and SQLite compaction."
+    },
+    {
+      "id": "view-bucket",
+      "titleZh": "视图收纳窗",
+      "titleEn": "View Bucket",
+      "category": "utility",
+      "platform": "cross-platform",
+      "descZh": "把保存的视图变成随手置顶收纳盒，拖入或粘贴素材时自动按视图规则打标归位。",
+      "descEn": "Turn any saved view into a floating drop box that automatically tags and files dragged or pasted items."
+    },
+    {
+      "id": "embed-apple",
+      "titleZh": "Apple Vision 视觉特征引擎",
+      "titleEn": "Apple Vision Embedding Engine",
+      "category": "engine",
+      "platform": "macos",
+      "descZh": "调用 macOS 系统神经引擎离线提取 768 维视觉特征，开箱为灵图检索与创意漫游提供以图搜图能力。",
+      "descEn": "Uses macOS Vision framework locally for zero-setup 768D visual embeddings powering reverse image search and similarity browsing."
+    },
+    {
+      "id": "embed-classic",
+      "titleZh": "经典视觉特征引擎",
+      "titleEn": "Classic Visual Feature Engine",
+      "category": "engine",
+      "platform": "cross-platform",
+      "descZh": "纯 TypeScript 跨平台视觉特征引擎，无需原生模型即可在 Windows、Linux 与 macOS 上提供以图搜图与视觉去重。",
+      "descEn": "Pure TypeScript cross-platform visual feature engine enabling similarity search and deduplication with zero native dependencies."
+    },
+    {
+      "id": "embed-clip",
+      "titleZh": "Chinese-CLIP 中文语义引擎",
+      "titleEn": "Chinese-CLIP Semantic Engine",
+      "category": "engine",
+      "platform": "cross-platform",
+      "descZh": "搭配 huoye-cn-clip 共享运行包，为灵图检索提供离线中英双语自然语言文搜图与图文混搜能力。",
+      "descEn": "Pairs with the huoye-cn-clip shared runtime to power offline Chinese & English text-to-image and cross-modal search."
+    },
+    {
+      "id": "vision-apple",
+      "titleZh": "Apple Vision 识字抠图引擎",
+      "titleEn": "Apple Vision OCR & Cutout Engine",
+      "category": "engine",
+      "platform": "macos",
+      "descZh": "调用 macOS 原生 Vision 框架离线执行高精度多语 OCR 与前景主体抠图，为灵眸视觉供能。",
+      "descEn": "Uses macOS Vision locally for high-accuracy multilingual OCR and foreground subject cutouts in Vision Studio."
+    },
+    {
+      "id": "vision-tesseract",
+      "titleZh": "Tesseract 跨平台 OCR 引擎",
+      "titleEn": "Tesseract OCR Engine",
+      "category": "engine",
+      "platform": "cross-platform",
+      "descZh": "对接本机 Tesseract 的跨平台文字识别引擎，在 Windows、Linux 与 macOS 上为灵眸视觉提供多语 OCR。",
+      "descEn": "Cross-platform OCR capability provider backed by local Tesseract for Vision Studio on macOS, Windows, and Linux."
+    },
+    {
+      "id": "speech-whisper",
+      "titleZh": "Whisper 离线语音引擎",
+      "titleEn": "Whisper Speech Engine",
+      "category": "engine",
+      "platform": "cross-platform",
+      "descZh": "搭配 huoye-whisper 共享运行包，为听译字幕工坊提供离线多语种语音转写与时间戳能力。",
+      "descEn": "Pairs with the huoye-whisper shared runtime to provide offline multilingual speech-to-text for Whisper Subtitle Studio."
+    }
+  ]
+}

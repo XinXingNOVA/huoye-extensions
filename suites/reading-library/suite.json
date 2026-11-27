@@ -1,0 +1,426 @@
+{
+  "formatVersion": 1,
+  "id": "reading-library",
+  "title": "青瓷书房",
+  "version": "0.1.0",
+  "description": "一站式个人藏书与精读空间：支持 EPUB、Kindle、PDF、漫画画集与长篇 TXT，配备实体书架、书目台账与书摘回跳。",
+  "packages": [
+    "packages/epub.hyplugin",
+    "packages/ebook-reader.hyplugin",
+    "packages/book-meta.hyplugin",
+    "packages/bookshelf.hyplugin",
+    "packages/comic.hyplugin",
+    "packages/txt-reader.hyplugin",
+    "packages/highlights.hyplugin",
+    "packages/annotate.hyplugin",
+    "packages/collection.hyplugin",
+    "packages/tags.hyplugin",
+    "packages/tag-groups.hyplugin",
+    "packages/rating.hyplugin",
+    "packages/status.hyplugin",
+    "packages/note.hyplugin",
+    "packages/table.hyplugin"
+  ],
+  "presets": [
+    {
+      "id": "bookshelf",
+      "recommendedTheme": "celadon-reading",
+      "title": "青瓷书房 · 书架模式",
+      "description": "按书架陈列多格式藏书与阅读进度，随阅读自动切出章节目录与批注。",
+      "plugins": [
+        "preview",
+        "pdf",
+        "text",
+        "image",
+        "epub",
+        "ebook-reader",
+        "book-meta",
+        "bookshelf",
+        "comic",
+        "txt-reader",
+        "highlights",
+        "annotate",
+        "collection",
+        "tags",
+        "tag-groups",
+        "rating",
+        "status",
+        "note",
+        "table"
+      ],
+      "layout": {
+        "version": 1,
+        "root": {
+          "type": "group",
+          "id": "main"
+        },
+        "primary": "main",
+        "panels": {
+          "sidebar": true,
+          "inspector": true
+        },
+        "panelSizes": {
+          "sidebar": 280,
+          "inspector": 310
+        },
+        "sidebars": {
+          "version": 4,
+          "containers": [
+            {
+              "id": "host.navigation",
+              "side": "left",
+              "type": "tabs",
+              "views": [
+                "host.navigation"
+              ],
+              "active": "host.navigation"
+            },
+            {
+              "id": "host.context",
+              "side": "left",
+              "type": "context",
+              "views": [],
+              "active": "",
+              "contexts": {
+                "collection": {
+                  "tools": [
+                    "host.filters"
+                  ],
+                  "active": "host.filters"
+                }
+              }
+            },
+            {
+              "id": "host.inspector",
+              "side": "right",
+              "type": "tabs",
+              "views": [
+                "host.inspector"
+              ],
+              "active": "host.inspector"
+            }
+          ],
+          "selected": {
+            "left": "host.navigation",
+            "right": "host.inspector"
+          },
+          "hidden": [],
+          "weights": {
+            "host.navigation": 0.45,
+            "host.context": 0.55,
+            "host.inspector": 1
+          }
+        },
+        "contents": {
+          "main": {
+            "items": [
+              {
+                "kind": "page",
+                "type": "collection",
+                "target": {
+                  "presetId": "all"
+                },
+                "presentation": {
+                  "layout": "bookshelf",
+                  "options": {
+                    "shelfStyle": "celadon",
+                    "groupBy": "none",
+                    "showProgress": true,
+                    "showFormat": true,
+                    "showAuthor": true
+                  },
+                  "zoom": 140
+                }
+              },
+              {
+                "kind": "page",
+                "type": "bookshelf.desk",
+                "target": {}
+              }
+            ],
+            "active": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "catalog",
+      "recommendedTheme": "celadon-reading",
+      "title": "书目台账 · 编目模式",
+      "description": "按作者、丛书、出版年、ISBN 与阅读状态批量校对，附年度书墙。",
+      "plugins": [
+        "preview",
+        "pdf",
+        "text",
+        "image",
+        "epub",
+        "ebook-reader",
+        "book-meta",
+        "bookshelf",
+        "comic",
+        "txt-reader",
+        "highlights",
+        "annotate",
+        "collection",
+        "tags",
+        "tag-groups",
+        "rating",
+        "status",
+        "note",
+        "table"
+      ],
+      "layout": {
+        "version": 1,
+        "root": {
+          "type": "group",
+          "id": "main"
+        },
+        "primary": "main",
+        "panels": {
+          "sidebar": true,
+          "inspector": true
+        },
+        "panelSizes": {
+          "sidebar": 270,
+          "inspector": 340
+        },
+        "sidebars": {
+          "version": 4,
+          "containers": [
+            {
+              "id": "host.navigation",
+              "side": "left",
+              "type": "tabs",
+              "views": [
+                "host.navigation"
+              ],
+              "active": "host.navigation"
+            },
+            {
+              "id": "host.context",
+              "side": "left",
+              "type": "context",
+              "views": [],
+              "active": "",
+              "contexts": {
+                "collection": {
+                  "tools": [
+                    "host.filters"
+                  ],
+                  "active": "host.filters"
+                }
+              }
+            },
+            {
+              "id": "host.inspector",
+              "side": "right",
+              "type": "tabs",
+              "views": [
+                "host.inspector"
+              ],
+              "active": "host.inspector"
+            }
+          ],
+          "selected": {
+            "left": "host.navigation",
+            "right": "host.inspector"
+          },
+          "hidden": [],
+          "weights": {
+            "host.navigation": 0.45,
+            "host.context": 0.55,
+            "host.inspector": 1
+          }
+        },
+        "contents": {
+          "main": {
+            "items": [
+              {
+                "kind": "page",
+                "type": "collection",
+                "target": {
+                  "presetId": "all"
+                },
+                "presentation": {
+                  "layout": "table",
+                  "options": {}
+                }
+              },
+              {
+                "kind": "page",
+                "type": "book-meta.year-wall",
+                "target": {}
+              }
+            ],
+            "active": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "study",
+      "recommendedTheme": "celadon-reading",
+      "title": "精读与书摘工作台",
+      "description": "以书摘馆与每日回顾为核心，所有摘录均可一键跳回原书高亮位置。",
+      "plugins": [
+        "preview",
+        "pdf",
+        "text",
+        "image",
+        "epub",
+        "ebook-reader",
+        "book-meta",
+        "bookshelf",
+        "comic",
+        "txt-reader",
+        "highlights",
+        "annotate",
+        "collection",
+        "tags",
+        "tag-groups",
+        "rating",
+        "status",
+        "note",
+        "table"
+      ],
+      "layout": {
+        "version": 1,
+        "root": {
+          "type": "group",
+          "id": "main"
+        },
+        "primary": "main",
+        "panels": {
+          "sidebar": true,
+          "inspector": true
+        },
+        "panelSizes": {
+          "sidebar": 280,
+          "inspector": 330
+        },
+        "sidebars": {
+          "version": 4,
+          "containers": [
+            {
+              "id": "host.navigation",
+              "side": "left",
+              "type": "tabs",
+              "views": [
+                "host.navigation"
+              ],
+              "active": "host.navigation"
+            },
+            {
+              "id": "host.context",
+              "side": "left",
+              "type": "context",
+              "views": [],
+              "active": "",
+              "contexts": {
+                "collection": {
+                  "tools": [
+                    "host.filters"
+                  ],
+                  "active": "host.filters"
+                }
+              }
+            },
+            {
+              "id": "host.inspector",
+              "side": "right",
+              "type": "tabs",
+              "views": [
+                "host.inspector"
+              ],
+              "active": "host.inspector"
+            }
+          ],
+          "selected": {
+            "left": "host.navigation",
+            "right": "host.inspector"
+          },
+          "hidden": [],
+          "weights": {
+            "host.navigation": 0.4,
+            "host.context": 0.6,
+            "host.inspector": 1
+          }
+        },
+        "contents": {
+          "main": {
+            "items": [
+              {
+                "kind": "page",
+                "type": "collection",
+                "target": {
+                  "presetId": "all"
+                },
+                "presentation": {
+                  "layout": "bookshelf",
+                  "options": {
+                    "shelfStyle": "celadon",
+                    "groupBy": "state",
+                    "showProgress": true,
+                    "showFormat": true,
+                    "showAuthor": true
+                  },
+                  "zoom": 140
+                }
+              },
+              {
+                "kind": "page",
+                "type": "highlights.hub",
+                "target": {}
+              }
+            ],
+            "active": 1
+          }
+        }
+      }
+    }
+  ],
+  "locales": {
+    "en": {
+      "青瓷书房 · 阅读与书库套件": "Celadon Study · Reading & Library Suite",
+      "面向 EPUB、Kindle（AZW3/MOBI/KF8）、FB2、DOCX、MHTML 长文、PDF、漫画画集（CBZ/CBT/CBR/CB7 随包原生按需取图引擎、GBK/Shift-JIS 老漫画编码自动还原与跨平台降级）与长篇 TXT 的一站式个人阅读与藏书套件。提供青瓷书架、Calibre 式书目台账、多格式精读体验与书摘重温工作台。": "An all-in-one personal reading and book library suite for EPUB, Kindle (AZW3/MOBI/KF8), FB2, DOCX, MHTML articles, PDF, comics/artbooks (with bundled on-demand native page engine, automatic GBK/Shift-JIS archive filename decoding, and cross-platform fallback), and long-form TXT novels — featuring a tactile bookshelf, Calibre-style catalog table, deep reading modes, and a highlights review hub.",
+      "青瓷书房 · 书架模式": "Celadon Study · Bookshelf",
+      "以实体书架展示全库多格式藏书与阅读进度，并配书房主页；左侧导航与智能工具容器自动切换筛选和书籍目录，右侧查看并编辑书目详情。": "Browse your multi-format library on a tactile bookshelf paired with Study Desk, smart contextual navigation on the left, and metadata inspector on the right.",
+      "书目台账 · Calibre 模式": "Book Catalog · Calibre Table",
+      "以表格逐行整理作者、丛书、出版年、ISBN、评分、标签与阅读状态，并附年度书墙标签页，适合批量校对与编目。": "Curate authors, series, years, ISBNs, ratings, tags, and reading status row by row in a table alongside the Year Wall.",
+      "精读与摘录工作台": "Deep Reading & Highlights Studio",
+      "面向深度阅读、批注整理与每日重温：搭配书摘馆、按阅读状态分组的青瓷书架、智能上下文目录容器与右侧详情检查器。": "Built for focused study, annotation, and daily review — pairing the Highlights Hub with a state-grouped bookshelf, smart book navigation, and inspector.",
+      "preview": "Previews",
+      "pdf": "PDF",
+      "text": "Text",
+      "image": "Image",
+      "预览": "Previews",
+      "PDF": "PDF",
+      "文字": "Text",
+      "图片": "Image",
+      "EPUB 阅读器": "EPUB Reader",
+      "多格式电子书与长文": "Multi-format E-book & Article Reader",
+      "书目与藏书": "Book Metadata & Library",
+      "书架与书房": "Bookshelf & Study",
+      "漫画与画集阅读器": "Comic & Artbook Reader",
+      "长篇 TXT 精读器": "Long-Form TXT Reader",
+      "书摘馆与每日回顾": "Highlights Hub",
+      "批注": "Annotations",
+      "组": "Folders",
+      "标签基础": "Tags",
+      "标签分组": "Tag groups",
+      "评分": "Rating",
+      "状态": "Status",
+      "笔记": "Notes",
+      "表格": "Table",
+      "青瓷书房": "Celadon Study",
+      "一站式个人藏书与精读空间：支持 EPUB、Kindle、PDF、漫画画集与长篇 TXT，配备实体书架、书目台账与书摘回跳。": "Personal reading room for EPUB, Kindle, PDF, comics, and long TXT files — with a tactile bookshelf, book catalog table, and highlights that jump back to the exact passage.",
+      "按书架陈列多格式藏书与阅读进度，随阅读自动切出章节目录与批注。": "Browse your multi-format library on a bookshelf with reading progress and contextual table of contents.",
+      "书目台账 · 编目模式": "Book Ledger · Catalog Table",
+      "按作者、丛书、出版年、ISBN 与阅读状态批量校对，附年度书墙。": "Curate authors, series, years, ISBNs, and reading status in a table alongside the Year Wall.",
+      "精读与书摘工作台": "Deep Reading & Highlights",
+      "以书摘馆与每日回顾为核心，所有摘录均可一键跳回原书高亮位置。": "Centers on the Highlights Hub and daily review, with one-click jump back to the source passage.",
+      "多格式电子书阅读器": "Multi-Format E-book Reader",
+      "书目与藏书档案": "Book Metadata"
+    }
+  }
+}
