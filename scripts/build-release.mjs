@@ -176,7 +176,7 @@ async function main() {
       consumes,
       file: `plugins/${fileName}`,
       assetName: fileName,
-      downloadUrl: `${spec.releaseBaseUrl}/${fileName}`,
+      downloadUrl: `${spec.releaseBaseUrl}/huoye-extensions-plugins-${VERSION}.zip`,
       bytes: statSync(outFile).size,
       sha256: sha256File(outFile)
     })
@@ -392,7 +392,30 @@ async function main() {
     process.stdout.write(`  ✓ ${fileName} (${(statSync(outFile).size / 1024).toFixed(1)} KB)\n`)
   }
 
-  // 5. Write manifest.json & SHA256SUMS.txt
+  // 5. Bundle 38 standalone plugins into a single clean ZIP archive for GitHub Releases
+  const pluginsBundleName = `huoye-extensions-plugins-${VERSION}.zip`
+  const pluginsBundlePath = join(releaseDir, pluginsBundleName)
+  const bundleStage = mkdtempSync(join(tmpdir(), 'huoye-ext-plugins-zip-'))
+  try {
+    const folderName = `huoye-extensions-plugins-${VERSION}`
+    const folderPath = join(bundleStage, folderName)
+    mkdirSync(folderPath, { recursive: true })
+    for (const p of pluginsOut) {
+      copyFileSync(join(releaseDir, p.file), join(folderPath, p.assetName))
+    }
+    execFileSync('zip', ['-rq', '-X', pluginsBundlePath, folderName], { cwd: bundleStage, stdio: 'pipe' })
+  } finally {
+    rmSync(bundleStage, { recursive: true, force: true })
+  }
+  const pluginsBundle = {
+    assetName: pluginsBundleName,
+    downloadUrl: `${spec.releaseBaseUrl}/${pluginsBundleName}`,
+    count: pluginsOut.length,
+    bytes: statSync(pluginsBundlePath).size,
+    sha256: sha256File(pluginsBundlePath)
+  }
+
+  // 6. Write manifest.json & SHA256SUMS.txt (12 downloadable release assets + SHA256SUMS.txt = 13 files)
   const manifest = {
     generatedAt: new Date().toISOString(),
     releaseVersion: VERSION,
@@ -406,6 +429,7 @@ async function main() {
       themes: themesOut.length,
       plugins: pluginsOut.length
     },
+    pluginsBundle,
     suites: suitesOut,
     runtimes: runtimesOut,
     themes: themesOut,
@@ -413,8 +437,8 @@ async function main() {
   }
   writeFileSync(join(extRoot, 'manifest.json'), JSON.stringify(manifest, null, 2) + '\n')
 
-  const allAssets = [...suitesOut, ...runtimesOut, ...themesOut, ...pluginsOut]
-  const shaLines = allAssets.map((a) => `${a.sha256}  ${a.assetName}`).join('\n') + '\n'
+  const releaseAssets = [...suitesOut, ...runtimesOut, ...themesOut, pluginsBundle]
+  const shaLines = releaseAssets.map((a) => `${a.sha256}  ${a.assetName}`).join('\n') + '\n'
   writeFileSync(join(releaseDir, 'SHA256SUMS.txt'), shaLines)
 
   // 6. Render illustrated README.md & README.en.md via render-readme.mjs

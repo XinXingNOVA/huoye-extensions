@@ -132,50 +132,50 @@
 
 ---
 
-## 单装插件（38 个）
+## 单装插件（38 个，已打包为合集）
 
-> 若已安装上面的场景套件，无需重复下载对应单装插件；下表供按需单独挑选或搭配自定义仓库使用。
+> 若已安装上面的场景套件，无需重复下载对应单装插件。需要按需单装或自由拼装时，下载单装插件合集包 **[huoye-extensions-plugins-0.1.0.zip](https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/huoye-extensions-plugins-0.1.0.zip)**（7.2 MB，解压后含以下全部 38 个 `.hyplugin`，可在设置中多选安装）：
 
-| 插件 | ID | 分类 | 平台 | 体积 | 简介 | 下载 |
-| :--- | :--- | :--- | :--- | ---: | :--- | :--- |
-| **创意漫游与灵感排序** | `creative-browse` | 视觉与画室 | 全平台 | 41 KB | 以随机种子洗牌、色彩光谱长河、视觉相似度串联与画幅节奏重新浏览图库，适合找灵感与挑片。 | [.hyplugin](https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/creative-browse-0.1.0.hyplugin) |
-| **图形审计** | `image-audit` | 视觉与画室 | 全平台 | 312 KB | 查看 RGB/明度直方图、极坐标色盘、像素吸管、贴图对齐质检、相机 EXIF，并自动索引 AI 生图参数。 | [.hyplugin](https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/image-audit-0.1.0.hyplugin) |
-| **画师精审看图与对比台** | `loupe-viewer` | 视觉与画室 | 全平台 | 62 KB | 暗房级看图与选片台：像素网格、镜像灰度、构图参考线、2–4 图同步卷帘对比与速写定时轮播。 | [.hyplugin](https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/loupe-viewer-0.1.0.hyplugin) |
-| **灵感参考板** | `pureboard` | 视觉与画室 | 全平台 | 298 KB | 无限画布参考板：自由摆放、旋转裁切、吸色便签、紧凑排布，并可撕出为无框置顶小窗。 | [.hyplugin](https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/pureboard-0.1.0.hyplugin) |
-| **灵眸视觉** | `vision-studio` | 视觉与画室 | 全平台 | 285 KB | 实况文本 OCR 与一键透明主体抠图工作台：图片文字直接入全局搜索与划选复制，抠图原分辨率导出。 | [.hyplugin](https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/vision-studio-0.1.0.hyplugin) |
-| **灵图检索** | `visual-search` | 视觉与画室 | 全平台 | 313 KB | 离线以图搜图、中英文自然语言文搜图、外图拖入不入库直搜、相似灵感侧栏与三档视觉去重清理。 | [.hyplugin](https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/visual-search-0.1.0.hyplugin) |
-| **字体馆** | `font-studio` | 设计资产 | 全平台 | 311 KB | 支持 TTF/OTF/WOFF/WOFF2 试打墙、可变轴调节、字形表、同屏叠影比对与商用授权记录。 | [.hyplugin](https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/font-studio-0.1.0.hyplugin) |
-| **PSD 图层工坊** | `psd-studio` | 设计资产 | 全平台 | 294 KB | 无需 Photoshop 直读 PSD/PSB 图层树与规格，支持图层显隐合成、孤立检视与原分辨率单层导出。 | [.hyplugin](https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/psd-studio-0.1.0.hyplugin) |
-| **矢量图标工坊** | `svg-studio` | 设计资产 | 全平台 | 304 KB | 安全预览 SVG 矢量图形、线框与多尺寸检查、无损换色、源码精简，并一键复制 React/CSS 或转 PNG。 | [.hyplugin](https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/svg-studio-0.1.0.hyplugin) |
-| **3D 雕塑展台** | `mesh-viewer` | 设计资产 | 全平台 | 325 KB | 本地预览 GLB/glTF/STL/OBJ 模型并自动生成棚拍缩略图，提供棚拍/黏土/法线/线框着色与置顶展台。 | [.hyplugin](https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/mesh-viewer-0.1.0.hyplugin) |
-| **EPUB 阅读器** | `epub` | 阅读与书库 | 全平台 | 462 KB | 双页对开与纸张排版 EPUB 精读器，支持护眼主题、脚注浮层、插图灯箱、全书搜索与书摘导出。 | [.hyplugin](https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/epub-0.1.0.hyplugin) |
-| **多格式电子书阅读器** | `ebook-reader` | 阅读与书库 | 全平台 | 348 KB | 离线精读 MOBI/AZW3/KF8、FB2、DOCX 与 MHTML 长文，支持双页对开、全书搜索与语音朗读。 | [.hyplugin](https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/ebook-reader-0.1.0.hyplugin) |
-| **长篇 TXT 精读器** | `txt-reader` | 阅读与书库 | 全平台 | 297 KB | 自动识别编码并切分长篇小说章节，支持双页阅读、目录导航、全书搜索与批注书签。 | [.hyplugin](https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/txt-reader-0.1.0.hyplugin) |
-| **漫画与画集阅读器** | `comic` | 阅读与书库 | 全平台 | 303 KB | 直读 CBZ/CBT/CBR 归档与多图画集，支持日漫右翻双页对开、条漫长卷与单页收藏入库。 | [.hyplugin](https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/comic-0.1.0.hyplugin) |
-| **书架与书房** | `bookshelf` | 阅读与书库 | 全平台 | 45 KB | 拟真书架浏览布局与书房主页，按状态、作者或丛书陈列藏书，追踪阅读进度与每日书摘。 | [.hyplugin](https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/bookshelf-0.1.0.hyplugin) |
-| **书目与藏书档案** | `book-meta` | 阅读与书库 | 全平台 | 271 KB | 为电子书、PDF 与漫画建立统一书目字段，追踪阅读状态、时长与年度书墙统计。 | [.hyplugin](https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/book-meta-0.1.0.hyplugin) |
-| **书摘馆与每日回顾** | `highlights` | 阅读与书库 | 全平台 | 295 KB | 汇聚全库读书摘录，支持按书归档、每日翻牌回顾、高清书摘卡片生成与一键跳回原文。 | [.hyplugin](https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/highlights-0.1.0.hyplugin) |
-| **放映室视频播放器** | `cine-player` | 影音与听译 | 全平台 | 345 KB | 面向拉片与审片的专业播放器：逐帧步进、A-B 循环、内封多语字幕直切、分镜标记与双视频卷帘对比。 | [.hyplugin](https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/cine-player-0.1.0.hyplugin) |
-| **黑胶台音频播放器** | `vinyl-audio` | 影音与听译 | 全平台 | 336 KB | 高解析音乐与播客播放器：黑胶唱盘、真实音频波形、双语滚动歌词、10 段均衡器与时间戳书签。 | [.hyplugin](https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/vinyl-audio-0.1.0.hyplugin) |
-| **唱片墙与放映厅** | `media-shelf` | 影音与听译 | 全平台 | 52 KB | 1:1 黑胶封套与 16:9 影院画幅自适应浏览布局，支持视频悬停预览、自动专辑聚合与续播入口。 | [.hyplugin](https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/media-shelf-0.1.0.hyplugin) |
-| **听译字幕工坊** | `whisper-studio` | 影音与听译 | 全平台 | 290 KB | 按需离线转写音视频对白，字幕全文自动入全局搜索，点词直达对应播放位置并支持导出 SRT/VTT/笔记。 | [.hyplugin](https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/whisper-studio-0.1.0.hyplugin) |
-| **视频分镜与无损快剪** | `clip-cutter` | 影音与听译 | 全平台 | 70 KB | 时间轴快速设定入出点无损秒切，支持自动镜头分镜拆解与高清故事板，可入库或直接导出到本地。 | [.hyplugin](https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/clip-cutter-0.1.0.hyplugin) |
-| **Office 文档透视镜** | `office-lens` | 文档与数据 | 全平台 | 328 KB | 离线阅读 Word (.docx)、PowerPoint (.pptx) 与中文 RTF，正文与演讲者备注自动入全文搜索，支持转 Markdown 与直出。 | [.hyplugin](https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/office-lens-0.1.0.hyplugin) |
-| **PDF 手术台与精加工** | `pdf-forge` | 文档与数据 | 仅 macOS | 77 KB | 合并、重排旋转、精准拆分、矢量中文水印、高清转图、多图合 PDF 与大纲文本提取，支持不入库直出。 | [.hyplugin](https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/pdf-forge-0.1.0.hyplugin) |
-| **压缩包免解压透视镜** | `archive-peek` | 文档与数据 | 全平台 | 317 KB | 不解压直接浏览和全文搜索 ZIP/TAR/TAR.GZ 内部文件，即时预览图文并按需提取入库或导出到本地。 | [.hyplugin](https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/archive-peek-0.1.0.hyplugin) |
-| **表格与数据透视镜** | `data-lens` | 文档与数据 | 全平台 | 314 KB | 流畅浏览十万行 CSV/TSV/XLSX/JSON 数据，提供列分布统计、筛选排序、交互图表生成与多格式互转。 | [.hyplugin](https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/data-lens-0.1.0.hyplugin) |
-| **格式魔方** | `format-forge` | 批处理与治理 | 全平台 | 89 KB | 批量压图、WebP/JPEG/PNG/ICO 转换、贴图对齐、水印与音视频转码抽帧，支持入库或直接导出到本地。 | [.hyplugin](https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/format-forge-0.1.0.hyplugin) |
-| **画册与联系表工坊** | `sheet-studio` | 批处理与治理 | 全平台 | 64 KB | 无缝拼接长图、生成暗房编号联系表（含 EXIF 标注）与多页 PDF 画册，支持入库或直接导出到本地。 | [.hyplugin](https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/sheet-studio-0.1.0.hyplugin) |
-| **切图与精灵图工坊** | `sprite-slicer` | 批处理与治理 | 全平台 | 76 KB | 九宫格/自定义网格批量切图、自动跳过空瓦片，以及游戏 Sprite Sheet 合图与动画预览，支持不入库直出。 | [.hyplugin](https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/sprite-slicer-0.1.0.hyplugin) |
-| **资产关系星图** | `link-graph` | 批处理与治理 | 全平台 | 60 KB | 汇聚双链引用、批注、分组、标签与视觉相似关系，以交互力导向星图与局部侧栏检出关联和孤岛素材。 | [.hyplugin](https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/link-graph-0.1.0.hyplugin) |
-| **仓库体检仪** | `vault-doctor` | 批处理与治理 | 全平台 | 59 KB | 用矩形树图分析空间占用，精确排查重复文件、加工失败项与孤立批注，并一键压缩回收数据库空间。 | [.hyplugin](https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/vault-doctor-0.1.0.hyplugin) |
-| **视图收纳窗** | `view-bucket` | 批处理与治理 | 全平台 | 237 KB | 把保存的视图变成随手置顶收纳盒，拖入或粘贴素材时自动按视图规则打标归位。 | [.hyplugin](https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/view-bucket-0.1.0.hyplugin) |
-| **Apple Vision 视觉特征引擎** | `embed-apple` | 算力引擎 | 仅 macOS | 28 KB | 调用 macOS 系统神经引擎离线提取 768 维视觉特征，开箱为灵图检索与创意漫游提供以图搜图能力。 | [.hyplugin](https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/embed-apple-0.1.0.hyplugin) |
-| **经典视觉特征引擎** | `embed-classic` | 算力引擎 | 全平台 | 31 KB | 纯 TypeScript 跨平台视觉特征引擎，无需原生模型即可在 Windows、Linux 与 macOS 上提供以图搜图与视觉去重。 | [.hyplugin](https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/embed-classic-0.1.0.hyplugin) |
-| **Chinese-CLIP 中文语义引擎** | `embed-clip` | 算力引擎 | 全平台 | 29 KB | 搭配 huoye-cn-clip 共享运行包，为灵图检索提供离线中英双语自然语言文搜图与图文混搜能力。 | [.hyplugin](https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/embed-clip-0.1.0.hyplugin) |
-| **Apple Vision 识字抠图引擎** | `vision-apple` | 算力引擎 | 仅 macOS | 25 KB | 调用 macOS 原生 Vision 框架离线执行高精度多语 OCR 与前景主体抠图，为灵眸视觉供能。 | [.hyplugin](https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/vision-apple-0.1.0.hyplugin) |
-| **Tesseract 跨平台 OCR 引擎** | `vision-tesseract` | 算力引擎 | 全平台 | 9 KB | 对接本机 Tesseract 的跨平台文字识别引擎，在 Windows、Linux 与 macOS 上为灵眸视觉提供多语 OCR。 | [.hyplugin](https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/vision-tesseract-0.1.0.hyplugin) |
-| **Whisper 离线语音引擎** | `speech-whisper` | 算力引擎 | 全平台 | 27 KB | 搭配 huoye-whisper 共享运行包，为听译字幕工坊提供离线多语种语音转写与时间戳能力。 | [.hyplugin](https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/speech-whisper-0.1.0.hyplugin) |
+| 插件 | 包内文件 | 分类 | 平台 | 体积 | 简介 |
+| :--- | :--- | :--- | :--- | ---: | :--- |
+| **创意漫游与灵感排序** | `creative-browse-0.1.0.hyplugin` | 视觉与画室 | 全平台 | 41 KB | 以随机种子洗牌、色彩光谱长河、视觉相似度串联与画幅节奏重新浏览图库，适合找灵感与挑片。 |
+| **图形审计** | `image-audit-0.1.0.hyplugin` | 视觉与画室 | 全平台 | 312 KB | 查看 RGB/明度直方图、极坐标色盘、像素吸管、贴图对齐质检、相机 EXIF，并自动索引 AI 生图参数。 |
+| **画师精审看图与对比台** | `loupe-viewer-0.1.0.hyplugin` | 视觉与画室 | 全平台 | 62 KB | 暗房级看图与选片台：像素网格、镜像灰度、构图参考线、2–4 图同步卷帘对比与速写定时轮播。 |
+| **灵感参考板** | `pureboard-0.1.0.hyplugin` | 视觉与画室 | 全平台 | 298 KB | 无限画布参考板：自由摆放、旋转裁切、吸色便签、紧凑排布，并可撕出为无框置顶小窗。 |
+| **灵眸视觉** | `vision-studio-0.1.0.hyplugin` | 视觉与画室 | 全平台 | 285 KB | 实况文本 OCR 与一键透明主体抠图工作台：图片文字直接入全局搜索与划选复制，抠图原分辨率导出。 |
+| **灵图检索** | `visual-search-0.1.0.hyplugin` | 视觉与画室 | 全平台 | 313 KB | 离线以图搜图、中英文自然语言文搜图、外图拖入不入库直搜、相似灵感侧栏与三档视觉去重清理。 |
+| **字体馆** | `font-studio-0.1.0.hyplugin` | 设计资产 | 全平台 | 311 KB | 支持 TTF/OTF/WOFF/WOFF2 试打墙、可变轴调节、字形表、同屏叠影比对与商用授权记录。 |
+| **PSD 图层工坊** | `psd-studio-0.1.0.hyplugin` | 设计资产 | 全平台 | 294 KB | 无需 Photoshop 直读 PSD/PSB 图层树与规格，支持图层显隐合成、孤立检视与原分辨率单层导出。 |
+| **矢量图标工坊** | `svg-studio-0.1.0.hyplugin` | 设计资产 | 全平台 | 304 KB | 安全预览 SVG 矢量图形、线框与多尺寸检查、无损换色、源码精简，并一键复制 React/CSS 或转 PNG。 |
+| **3D 雕塑展台** | `mesh-viewer-0.1.0.hyplugin` | 设计资产 | 全平台 | 325 KB | 本地预览 GLB/glTF/STL/OBJ 模型并自动生成棚拍缩略图，提供棚拍/黏土/法线/线框着色与置顶展台。 |
+| **EPUB 阅读器** | `epub-0.1.0.hyplugin` | 阅读与书库 | 全平台 | 462 KB | 双页对开与纸张排版 EPUB 精读器，支持护眼主题、脚注浮层、插图灯箱、全书搜索与书摘导出。 |
+| **多格式电子书阅读器** | `ebook-reader-0.1.0.hyplugin` | 阅读与书库 | 全平台 | 348 KB | 离线精读 MOBI/AZW3/KF8、FB2、DOCX 与 MHTML 长文，支持双页对开、全书搜索与语音朗读。 |
+| **长篇 TXT 精读器** | `txt-reader-0.1.0.hyplugin` | 阅读与书库 | 全平台 | 297 KB | 自动识别编码并切分长篇小说章节，支持双页阅读、目录导航、全书搜索与批注书签。 |
+| **漫画与画集阅读器** | `comic-0.1.0.hyplugin` | 阅读与书库 | 全平台 | 303 KB | 直读 CBZ/CBT/CBR 归档与多图画集，支持日漫右翻双页对开、条漫长卷与单页收藏入库。 |
+| **书架与书房** | `bookshelf-0.1.0.hyplugin` | 阅读与书库 | 全平台 | 45 KB | 拟真书架浏览布局与书房主页，按状态、作者或丛书陈列藏书，追踪阅读进度与每日书摘。 |
+| **书目与藏书档案** | `book-meta-0.1.0.hyplugin` | 阅读与书库 | 全平台 | 271 KB | 为电子书、PDF 与漫画建立统一书目字段，追踪阅读状态、时长与年度书墙统计。 |
+| **书摘馆与每日回顾** | `highlights-0.1.0.hyplugin` | 阅读与书库 | 全平台 | 295 KB | 汇聚全库读书摘录，支持按书归档、每日翻牌回顾、高清书摘卡片生成与一键跳回原文。 |
+| **放映室视频播放器** | `cine-player-0.1.0.hyplugin` | 影音与听译 | 全平台 | 345 KB | 面向拉片与审片的专业播放器：逐帧步进、A-B 循环、内封多语字幕直切、分镜标记与双视频卷帘对比。 |
+| **黑胶台音频播放器** | `vinyl-audio-0.1.0.hyplugin` | 影音与听译 | 全平台 | 336 KB | 高解析音乐与播客播放器：黑胶唱盘、真实音频波形、双语滚动歌词、10 段均衡器与时间戳书签。 |
+| **唱片墙与放映厅** | `media-shelf-0.1.0.hyplugin` | 影音与听译 | 全平台 | 52 KB | 1:1 黑胶封套与 16:9 影院画幅自适应浏览布局，支持视频悬停预览、自动专辑聚合与续播入口。 |
+| **听译字幕工坊** | `whisper-studio-0.1.0.hyplugin` | 影音与听译 | 全平台 | 290 KB | 按需离线转写音视频对白，字幕全文自动入全局搜索，点词直达对应播放位置并支持导出 SRT/VTT/笔记。 |
+| **视频分镜与无损快剪** | `clip-cutter-0.1.0.hyplugin` | 影音与听译 | 全平台 | 70 KB | 时间轴快速设定入出点无损秒切，支持自动镜头分镜拆解与高清故事板，可入库或直接导出到本地。 |
+| **Office 文档透视镜** | `office-lens-0.1.0.hyplugin` | 文档与数据 | 全平台 | 328 KB | 离线阅读 Word (.docx)、PowerPoint (.pptx) 与中文 RTF，正文与演讲者备注自动入全文搜索，支持转 Markdown 与直出。 |
+| **PDF 手术台与精加工** | `pdf-forge-0.1.0.hyplugin` | 文档与数据 | 仅 macOS | 77 KB | 合并、重排旋转、精准拆分、矢量中文水印、高清转图、多图合 PDF 与大纲文本提取，支持不入库直出。 |
+| **压缩包免解压透视镜** | `archive-peek-0.1.0.hyplugin` | 文档与数据 | 全平台 | 317 KB | 不解压直接浏览和全文搜索 ZIP/TAR/TAR.GZ 内部文件，即时预览图文并按需提取入库或导出到本地。 |
+| **表格与数据透视镜** | `data-lens-0.1.0.hyplugin` | 文档与数据 | 全平台 | 314 KB | 流畅浏览十万行 CSV/TSV/XLSX/JSON 数据，提供列分布统计、筛选排序、交互图表生成与多格式互转。 |
+| **格式魔方** | `format-forge-0.1.0.hyplugin` | 批处理与治理 | 全平台 | 89 KB | 批量压图、WebP/JPEG/PNG/ICO 转换、贴图对齐、水印与音视频转码抽帧，支持入库或直接导出到本地。 |
+| **画册与联系表工坊** | `sheet-studio-0.1.0.hyplugin` | 批处理与治理 | 全平台 | 64 KB | 无缝拼接长图、生成暗房编号联系表（含 EXIF 标注）与多页 PDF 画册，支持入库或直接导出到本地。 |
+| **切图与精灵图工坊** | `sprite-slicer-0.1.0.hyplugin` | 批处理与治理 | 全平台 | 76 KB | 九宫格/自定义网格批量切图、自动跳过空瓦片，以及游戏 Sprite Sheet 合图与动画预览，支持不入库直出。 |
+| **资产关系星图** | `link-graph-0.1.0.hyplugin` | 批处理与治理 | 全平台 | 60 KB | 汇聚双链引用、批注、分组、标签与视觉相似关系，以交互力导向星图与局部侧栏检出关联和孤岛素材。 |
+| **仓库体检仪** | `vault-doctor-0.1.0.hyplugin` | 批处理与治理 | 全平台 | 59 KB | 用矩形树图分析空间占用，精确排查重复文件、加工失败项与孤立批注，并一键压缩回收数据库空间。 |
+| **视图收纳窗** | `view-bucket-0.1.0.hyplugin` | 批处理与治理 | 全平台 | 237 KB | 把保存的视图变成随手置顶收纳盒，拖入或粘贴素材时自动按视图规则打标归位。 |
+| **Apple Vision 视觉特征引擎** | `embed-apple-0.1.0.hyplugin` | 算力引擎 | 仅 macOS | 28 KB | 调用 macOS 系统神经引擎离线提取 768 维视觉特征，开箱为灵图检索与创意漫游提供以图搜图能力。 |
+| **经典视觉特征引擎** | `embed-classic-0.1.0.hyplugin` | 算力引擎 | 全平台 | 31 KB | 纯 TypeScript 跨平台视觉特征引擎，无需原生模型即可在 Windows、Linux 与 macOS 上提供以图搜图与视觉去重。 |
+| **Chinese-CLIP 中文语义引擎** | `embed-clip-0.1.0.hyplugin` | 算力引擎 | 全平台 | 29 KB | 搭配 huoye-cn-clip 共享运行包，为灵图检索提供离线中英双语自然语言文搜图与图文混搜能力。 |
+| **Apple Vision 识字抠图引擎** | `vision-apple-0.1.0.hyplugin` | 算力引擎 | 仅 macOS | 25 KB | 调用 macOS 原生 Vision 框架离线执行高精度多语 OCR 与前景主体抠图，为灵眸视觉供能。 |
+| **Tesseract 跨平台 OCR 引擎** | `vision-tesseract-0.1.0.hyplugin` | 算力引擎 | 全平台 | 9 KB | 对接本机 Tesseract 的跨平台文字识别引擎，在 Windows、Linux 与 macOS 上为灵眸视觉提供多语 OCR。 |
+| **Whisper 离线语音引擎** | `speech-whisper-0.1.0.hyplugin` | 算力引擎 | 全平台 | 27 KB | 搭配 huoye-whisper 共享运行包，为听译字幕工坊提供离线多语种语音转写与时间戳能力。 |
 
 ---
 

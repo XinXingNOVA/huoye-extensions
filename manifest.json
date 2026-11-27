@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-26T15:41:20.050Z",
+  "generatedAt": "2026-11-27T05:01:43.497Z",
   "releaseVersion": "0.1.0",
   "releaseTag": "v0.1.0",
   "repo": "XinXingNOVA/huoye-extensions",
@@ -511,7 +511,7 @@
       "consumes": [],
       "file": "plugins/creative-browse-0.1.0.hyplugin",
       "assetName": "creative-browse-0.1.0.hyplugin",
-      "downloadUrl": "https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/creative-browse-0.1.0.hyplugin",
+      "downloadUrl": "https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/huoye-extensions-plugins-0.1.0.zip",
       "bytes": 42179,
       "sha256": "7c5624ee37d810d4c6465c30c7eb5e56e357d8ce944ec343902c1720b4c3a942"
     },
@@ -528,7 +528,7 @@
       "consumes": [],
       "file": "plugins/image-audit-0.1.0.hyplugin",
       "assetName": "image-audit-0.1.0.hyplugin",
-      "downloadUrl": "https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/image-audit-0.1.0.hyplugin",
+      "downloadUrl": "https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/huoye-extensions-plugins-0.1.0.zip",
       "bytes": 319265,
       "sha256": "62116e4c49976de14087145e1edda242f7766b1c147b248c05bf2be3fd59ecca"
     },
@@ -545,7 +545,7 @@
       "consumes": [],
       "file": "plugins/loupe-viewer-0.1.0.hyplugin",
       "assetName": "loupe-viewer-0.1.0.hyplugin",
-      "downloadUrl": "https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/loupe-viewer-0.1.0.hyplugin",
+      "downloadUrl": "https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/huoye-extensions-plugins-0.1.0.zip",
       "bytes": 63749,
       "sha256": "5fd8a1615c0737b7ed4cd8d0c9ad7cfae479a6e29d6734eceded7a59346aa446"
     },
@@ -562,7 +562,7 @@
       "consumes": [],
       "file": "plugins/pureboard-0.1.0.hyplugin",
       "assetName": "pureboard-0.1.0.hyplugin",
-      "downloadUrl": "https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/pureboard-0.1.0.hyplugin",
+      "downloadUrl": "https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/huoye-extensions-plugins-0.1.0.zip",
       "bytes": 305345,
       "sha256": "5672e32d5091e06d081593fd877b89988f850ce60ddc89b72240fc8d97cddc5e"
     },
@@ -582,7 +582,7 @@
       ],
       "file": "plugins/vision-studio-0.1.0.hyplugin",
       "assetName": "vision-studio-0.1.0.hyplugin",
-      "downloadUrl": "https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/vision-studio-0.1.0.hyplugin",
+      "downloadUrl": "https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/huoye-extensions-plugins-0.1.0.zip",
       "bytes": 292270,
       "sha256": "43d10db9ceb0ebf0a17610de7f90f6dd2ba48d19351287a1240ae16d7da72e78"
     },
@@ -601,7 +601,7 @@
       ],
       "file": "plugins/visual-search-0.1.0.hyplugin",
       "assetName": "visual-search-0.1.0.hyplugin",
-      "downloadUrl": "https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/visual-search-0.1.0.hyplugin",
+      "downloadUrl": "https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/huoye-extensions-plugins-0.1.0.zip",
       "bytes": 320459,
       "sha256": "19414ead15af9ca4d92ab22dddcfa6070cec53e9d9a52811bc1961e1a2021a74"
     },
@@ -618,7 +618,7 @@
       "consumes": [],
       "file": "plugins/font-studio-0.1.0.hyplugin",
       "assetName": "font-studio-0.1.0.hyplugin",
-      "downloadUrl": "https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/font-studio-0.1.0.hyplugin",
+      "downloadUrl": "https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/huoye-extensions-plugins-0.1.0.zip",
       "bytes": 318379,
       "sha256": "fb544eb85a7e613f5aba2efe784e8f96d06fffc22b578e4fd0e699119a307732"
     },
@@ -641,7 +641,7 @@
       ],
       "file": "plugins/psd-studio-0.1.0.hyplugin",
       "assetName": "psd-studio-0.1.0.hyplugin",
-      "downloadUrl": "https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/psd-studio-0.1.0.hyplugin",
+      "downloadUrl": "https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/huoye-extensions-plugins-0.1.0.zip",
       "bytes": 300604,
       "sha256": "3d82d1178867a3fb87983936f6d08d778f725d951e774d5b6920e212cc871dc3"
     },
@@ -658,7 +658,7 @@
       "consumes": [],
       "file": "plugins/svg-studio-0.1.0.hyplugin",
       "assetName": "svg-studio-0.1.0.hyplugin",
-      "downloadUrl": "https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/svg-studio-0.1.0.hyplugin",
+      "downloadUrl": "https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/huoye-extensions-plugins-0.1.0.zip",
       "bytes": 311668,
       "sha256": "1262653bafab9eb22113aa760efef918720a156ea8e723a8d67349381f1c3f49"
     },
@@ -675,7 +675,7 @@
       "consumes": [],
       "file": "plugins/mesh-viewer-0.1.0.hyplugin",
       "assetName": "mesh-viewer-0.1.0.hyplugin",
-      "downloadUrl": "https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/mesh-viewer-0.1.0.hyplugin",
+      "downloadUrl": "https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/huoye-extensions-plugins-0.1.0.zip",
       "bytes": 332878,
       "sha256": "91fe206204f6a674ef04838964f7aefb0938128645c72d59163a779b7cecd9cf"
     },
@@ -692,7 +692,7 @@
       "consumes": [],
       "file": "plugins/epub-0.1.0.hyplugin",
       "assetName": "epub-0.1.0.hyplugin",
-      "downloadUrl": "https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/epub-0.1.0.hyplugin",
+      "downloadUrl": "https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/huoye-extensions-plugins-0.1.0.zip",
       "bytes": 473078,
       "sha256": "21215864d82615b6a4bb47dabb43f20cb457decbbbc8527a9cb7a46716f627e4"
     },
@@ -709,7 +709,7 @@
       "consumes": [],
       "file": "plugins/ebook-reader-0.1.0.hyplugin",
       "assetName": "ebook-reader-0.1.0.hyplugin",
-      "downloadUrl": "https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/ebook-reader-0.1.0.hyplugin",
+      "downloadUrl": "https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/huoye-extensions-plugins-0.1.0.zip",
       "bytes": 355938,
       "sha256": "ab4ab2d982532132fefad14c649b8645f8af078eb7d6e4a756279c60d49d8fac"
     },
@@ -726,7 +726,7 @@
       "consumes": [],
       "file": "plugins/txt-reader-0.1.0.hyplugin",
       "assetName": "txt-reader-0.1.0.hyplugin",
-      "downloadUrl": "https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/txt-reader-0.1.0.hyplugin",
+      "downloadUrl": "https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/huoye-extensions-plugins-0.1.0.zip",
       "bytes": 304486,
       "sha256": "ad6b1a580f6fa3ee404f54ded5c9eee2c22fbfff9f4fd3ee3c678d7e9bcf0664"
     },
@@ -749,7 +749,7 @@
       ],
       "file": "plugins/comic-0.1.0.hyplugin",
       "assetName": "comic-0.1.0.hyplugin",
-      "downloadUrl": "https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/comic-0.1.0.hyplugin",
+      "downloadUrl": "https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/huoye-extensions-plugins-0.1.0.zip",
       "bytes": 310483,
       "sha256": "c11d5b8c2d49de81a0b03dff1132ee8c7f0ba425e653582333b50fe56df41f08"
     },
@@ -766,7 +766,7 @@
       "consumes": [],
       "file": "plugins/bookshelf-0.1.0.hyplugin",
       "assetName": "bookshelf-0.1.0.hyplugin",
-      "downloadUrl": "https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/bookshelf-0.1.0.hyplugin",
+      "downloadUrl": "https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/huoye-extensions-plugins-0.1.0.zip",
       "bytes": 45911,
       "sha256": "21e56f4413bce8613470dcf66e267b5499a646b60ede36e1841cff5cb3396049"
     },
@@ -783,7 +783,7 @@
       "consumes": [],
       "file": "plugins/book-meta-0.1.0.hyplugin",
       "assetName": "book-meta-0.1.0.hyplugin",
-      "downloadUrl": "https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/book-meta-0.1.0.hyplugin",
+      "downloadUrl": "https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/huoye-extensions-plugins-0.1.0.zip",
       "bytes": 277287,
       "sha256": "9f3bfb1622a16fd478c22997dfc3ffd595dd8ad031d853b5417f3b4a9c0475cf"
     },
@@ -800,7 +800,7 @@
       "consumes": [],
       "file": "plugins/highlights-0.1.0.hyplugin",
       "assetName": "highlights-0.1.0.hyplugin",
-      "downloadUrl": "https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/highlights-0.1.0.hyplugin",
+      "downloadUrl": "https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/huoye-extensions-plugins-0.1.0.zip",
       "bytes": 302018,
       "sha256": "34d98b534e3278f27c39b473ba1db8beae919a0d3e7f7f72aaae050d723ac11e"
     },
@@ -820,7 +820,7 @@
       ],
       "file": "plugins/cine-player-0.1.0.hyplugin",
       "assetName": "cine-player-0.1.0.hyplugin",
-      "downloadUrl": "https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/cine-player-0.1.0.hyplugin",
+      "downloadUrl": "https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/huoye-extensions-plugins-0.1.0.zip",
       "bytes": 352996,
       "sha256": "f94d496b913e0067e5cb58df7b59e5d9a24dbd7b0887de0f3093dc8d3a5a5431"
     },
@@ -840,7 +840,7 @@
       ],
       "file": "plugins/vinyl-audio-0.1.0.hyplugin",
       "assetName": "vinyl-audio-0.1.0.hyplugin",
-      "downloadUrl": "https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/vinyl-audio-0.1.0.hyplugin",
+      "downloadUrl": "https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/huoye-extensions-plugins-0.1.0.zip",
       "bytes": 343688,
       "sha256": "e31331200a741cb19b324fd7bb57ee883f4450bfaff70ec9836105148748a284"
     },
@@ -857,7 +857,7 @@
       "consumes": [],
       "file": "plugins/media-shelf-0.1.0.hyplugin",
       "assetName": "media-shelf-0.1.0.hyplugin",
-      "downloadUrl": "https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/media-shelf-0.1.0.hyplugin",
+      "downloadUrl": "https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/huoye-extensions-plugins-0.1.0.zip",
       "bytes": 53048,
       "sha256": "d17552a5a536ab7b12b39d82954ac02606780584f47d20d725e5f863497f0f6e"
     },
@@ -876,7 +876,7 @@
       ],
       "file": "plugins/whisper-studio-0.1.0.hyplugin",
       "assetName": "whisper-studio-0.1.0.hyplugin",
-      "downloadUrl": "https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/whisper-studio-0.1.0.hyplugin",
+      "downloadUrl": "https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/huoye-extensions-plugins-0.1.0.zip",
       "bytes": 296841,
       "sha256": "8a74a0640827db78794e99df2f19da255af27ddaa5b3090d3aa012ba1654b018"
     },
@@ -893,7 +893,7 @@
       "consumes": [],
       "file": "plugins/clip-cutter-0.1.0.hyplugin",
       "assetName": "clip-cutter-0.1.0.hyplugin",
-      "downloadUrl": "https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/clip-cutter-0.1.0.hyplugin",
+      "downloadUrl": "https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/huoye-extensions-plugins-0.1.0.zip",
       "bytes": 72099,
       "sha256": "377a4c10f6ee72969a68597f0353aaa0b7a12eed5c3b98bf1f02f6d937d36787"
     },
@@ -910,7 +910,7 @@
       "consumes": [],
       "file": "plugins/office-lens-0.1.0.hyplugin",
       "assetName": "office-lens-0.1.0.hyplugin",
-      "downloadUrl": "https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/office-lens-0.1.0.hyplugin",
+      "downloadUrl": "https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/huoye-extensions-plugins-0.1.0.zip",
       "bytes": 336110,
       "sha256": "3663b6f6babbaa46ab0212a6c108c3e9fd8f66d8aa9233d8652aa276dd7256a6"
     },
@@ -927,7 +927,7 @@
       "consumes": [],
       "file": "plugins/pdf-forge-0.1.0.hyplugin",
       "assetName": "pdf-forge-0.1.0.hyplugin",
-      "downloadUrl": "https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/pdf-forge-0.1.0.hyplugin",
+      "downloadUrl": "https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/huoye-extensions-plugins-0.1.0.zip",
       "bytes": 78410,
       "sha256": "4b131ad7177ff7e5d8fb5aae44cc01d405c63fa05a8e2b9a19322b8793b39178"
     },
@@ -944,7 +944,7 @@
       "consumes": [],
       "file": "plugins/archive-peek-0.1.0.hyplugin",
       "assetName": "archive-peek-0.1.0.hyplugin",
-      "downloadUrl": "https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/archive-peek-0.1.0.hyplugin",
+      "downloadUrl": "https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/huoye-extensions-plugins-0.1.0.zip",
       "bytes": 324566,
       "sha256": "9fbf580c5b33fc27df4bf63b686ccd984e437bdd8af4b42edeecc7b3adf47a27"
     },
@@ -961,7 +961,7 @@
       "consumes": [],
       "file": "plugins/data-lens-0.1.0.hyplugin",
       "assetName": "data-lens-0.1.0.hyplugin",
-      "downloadUrl": "https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/data-lens-0.1.0.hyplugin",
+      "downloadUrl": "https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/huoye-extensions-plugins-0.1.0.zip",
       "bytes": 321550,
       "sha256": "e1fd0d347f720a0e918a6d61e221e8c0ebb45c46dd87d3504dbd14cff95e7d1b"
     },
@@ -978,7 +978,7 @@
       "consumes": [],
       "file": "plugins/format-forge-0.1.0.hyplugin",
       "assetName": "format-forge-0.1.0.hyplugin",
-      "downloadUrl": "https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/format-forge-0.1.0.hyplugin",
+      "downloadUrl": "https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/huoye-extensions-plugins-0.1.0.zip",
       "bytes": 90803,
       "sha256": "219308a74369aad5eeda59758555f4ebe235576840633704c112c531622ec541"
     },
@@ -995,7 +995,7 @@
       "consumes": [],
       "file": "plugins/sheet-studio-0.1.0.hyplugin",
       "assetName": "sheet-studio-0.1.0.hyplugin",
-      "downloadUrl": "https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/sheet-studio-0.1.0.hyplugin",
+      "downloadUrl": "https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/huoye-extensions-plugins-0.1.0.zip",
       "bytes": 65420,
       "sha256": "b1c90a82b33c2174fa1f9269cff9583d1107fbb9d5ba3fcb7c01cddbbfb30ee6"
     },
@@ -1012,7 +1012,7 @@
       "consumes": [],
       "file": "plugins/sprite-slicer-0.1.0.hyplugin",
       "assetName": "sprite-slicer-0.1.0.hyplugin",
-      "downloadUrl": "https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/sprite-slicer-0.1.0.hyplugin",
+      "downloadUrl": "https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/huoye-extensions-plugins-0.1.0.zip",
       "bytes": 77723,
       "sha256": "61f68a4899263ed01717216e47bf405eb0b85bd5049e9c4305fa3a4a9b3b3e4f"
     },
@@ -1029,7 +1029,7 @@
       "consumes": [],
       "file": "plugins/link-graph-0.1.0.hyplugin",
       "assetName": "link-graph-0.1.0.hyplugin",
-      "downloadUrl": "https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/link-graph-0.1.0.hyplugin",
+      "downloadUrl": "https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/huoye-extensions-plugins-0.1.0.zip",
       "bytes": 61002,
       "sha256": "3333f9fc6ca7b5360e99b5b9fca10cf8cd1a77e5fd83223d385fa76c1096d041"
     },
@@ -1046,7 +1046,7 @@
       "consumes": [],
       "file": "plugins/vault-doctor-0.1.0.hyplugin",
       "assetName": "vault-doctor-0.1.0.hyplugin",
-      "downloadUrl": "https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/vault-doctor-0.1.0.hyplugin",
+      "downloadUrl": "https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/huoye-extensions-plugins-0.1.0.zip",
       "bytes": 60157,
       "sha256": "1e4e4b88baab4ec9459e2430afa14f76af0a94cf5ad0b3076f1ca5f23dfea622"
     },
@@ -1063,7 +1063,7 @@
       "consumes": [],
       "file": "plugins/view-bucket-0.1.0.hyplugin",
       "assetName": "view-bucket-0.1.0.hyplugin",
-      "downloadUrl": "https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/view-bucket-0.1.0.hyplugin",
+      "downloadUrl": "https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/huoye-extensions-plugins-0.1.0.zip",
       "bytes": 242983,
       "sha256": "e1dcfbf218f9531f35c3f458c2c40bf069271a01e5c67c01d5cff86357701734"
     },
@@ -1082,7 +1082,7 @@
       "consumes": [],
       "file": "plugins/embed-apple-0.1.0.hyplugin",
       "assetName": "embed-apple-0.1.0.hyplugin",
-      "downloadUrl": "https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/embed-apple-0.1.0.hyplugin",
+      "downloadUrl": "https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/huoye-extensions-plugins-0.1.0.zip",
       "bytes": 28220,
       "sha256": "4bb8e95ed825eba80b0da332eded172d1212c7644935e4d9ef2649e527b6b7e8"
     },
@@ -1101,7 +1101,7 @@
       "consumes": [],
       "file": "plugins/embed-classic-0.1.0.hyplugin",
       "assetName": "embed-classic-0.1.0.hyplugin",
-      "downloadUrl": "https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/embed-classic-0.1.0.hyplugin",
+      "downloadUrl": "https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/huoye-extensions-plugins-0.1.0.zip",
       "bytes": 31988,
       "sha256": "5af14f47693651813d6939db0fbd30d6ddbaef1ed5442db2e12a166d92efe10d"
     },
@@ -1121,7 +1121,7 @@
       "consumes": [],
       "file": "plugins/embed-clip-0.1.0.hyplugin",
       "assetName": "embed-clip-0.1.0.hyplugin",
-      "downloadUrl": "https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/embed-clip-0.1.0.hyplugin",
+      "downloadUrl": "https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/huoye-extensions-plugins-0.1.0.zip",
       "bytes": 30179,
       "sha256": "ceffce0a9f53669b56c7e1b29fbd15fa403c4d407bc5c6b48acbc85f99201fc6"
     },
@@ -1141,7 +1141,7 @@
       "consumes": [],
       "file": "plugins/vision-apple-0.1.0.hyplugin",
       "assetName": "vision-apple-0.1.0.hyplugin",
-      "downloadUrl": "https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/vision-apple-0.1.0.hyplugin",
+      "downloadUrl": "https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/huoye-extensions-plugins-0.1.0.zip",
       "bytes": 25973,
       "sha256": "1d1efffa5ad9f733df32b7bc83cfc0674799441f8a3e2e2afe922e1a8ecef824"
     },
@@ -1160,7 +1160,7 @@
       "consumes": [],
       "file": "plugins/vision-tesseract-0.1.0.hyplugin",
       "assetName": "vision-tesseract-0.1.0.hyplugin",
-      "downloadUrl": "https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/vision-tesseract-0.1.0.hyplugin",
+      "downloadUrl": "https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/huoye-extensions-plugins-0.1.0.zip",
       "bytes": 9292,
       "sha256": "80373bbd8dfca734d044a4433bed47dad93c46e8d6d1b9d22b9717359b016ca2"
     },
@@ -1179,9 +1179,16 @@
       "consumes": [],
       "file": "plugins/speech-whisper-0.1.0.hyplugin",
       "assetName": "speech-whisper-0.1.0.hyplugin",
-      "downloadUrl": "https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/speech-whisper-0.1.0.hyplugin",
+      "downloadUrl": "https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/huoye-extensions-plugins-0.1.0.zip",
       "bytes": 27919,
       "sha256": "2b0008841dfda756eb8aa14fd00004a644e4ab75e86fb70c07aad3f807f7cdc2"
     }
-  ]
+  ],
+  "pluginsBundle": {
+    "assetName": "huoye-extensions-plugins-0.1.0.zip",
+    "downloadUrl": "https://github.com/XinXingNOVA/huoye-extensions/releases/download/v0.1.0/huoye-extensions-plugins-0.1.0.zip",
+    "count": 38,
+    "bytes": 7597724,
+    "sha256": "86adac307e790b2fd04c92e74aad94c025b83603182c0f74af86848e555d2f66"
+  }
 }

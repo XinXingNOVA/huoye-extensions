@@ -6,7 +6,7 @@ const here = dirname(fileURLToPath(import.meta.url))
 const extRoot = resolve(here, '..')
 const manifest = JSON.parse(readFileSync(join(extRoot, 'manifest.json'), 'utf8'))
 
-const { releaseVersion, releaseTag, repoUrl, suites, runtimes, themes, plugins } = manifest
+const { releaseVersion, releaseTag, repoUrl, pluginsBundle, suites, runtimes, themes, plugins } = manifest
 
 const fmtSize = (b) => (b >= 1024 * 1024 ? `${(b / 1024 / 1024).toFixed(1)} MB` : `${(b / 1024).toFixed(0)} KB`)
 const picture = (base, alt) => `<picture>
@@ -142,13 +142,13 @@ ${themes.map((t) => `| **${t.nameZh}**<br/>\`${t.assetName}\` | ${t.dualMode ? '
 
 ---
 
-## 单装插件（${plugins.length} 个）
+## 单装插件（${plugins.length} 个，已打包为合集）
 
-> 若已安装上面的场景套件，无需重复下载对应单装插件；下表供按需单独挑选或搭配自定义仓库使用。
+> 若已安装上面的场景套件，无需重复下载对应单装插件。需要按需单装或自由拼装时，下载单装插件合集包 **[${pluginsBundle.assetName}](${pluginsBundle.downloadUrl})**（${fmtSize(pluginsBundle.bytes)}，解压后含以下全部 ${plugins.length} 个 \`.hyplugin\`，可在设置中多选安装）：
 
-| 插件 | ID | 分类 | 平台 | 体积 | 简介 | 下载 |
-| :--- | :--- | :--- | :--- | ---: | :--- | :--- |
-${plugins.map((p) => `| **${p.titleZh}** | \`${p.id}\` | ${catZh[p.category] || p.category} | ${p.platform === 'cross-platform' ? '全平台' : '仅 macOS'} | ${fmtSize(p.bytes)} | ${p.descZh} | [.hyplugin](${p.downloadUrl}) |`).join('\n')}
+| 插件 | 包内文件 | 分类 | 平台 | 体积 | 简介 |
+| :--- | :--- | :--- | :--- | ---: | :--- |
+${plugins.map((p) => `| **${p.titleZh}** | \`${p.assetName}\` | ${catZh[p.category] || p.category} | ${p.platform === 'cross-platform' ? '全平台' : '仅 macOS'} | ${fmtSize(p.bytes)} | ${p.descZh} |`).join('\n')}
 
 ---
 
@@ -274,13 +274,13 @@ ${themes.map((t) => `| **${t.nameEn}**<br/>\`${t.assetName}\` | ${t.dualMode ? '
 
 ---
 
-## Standalone Plugins (${plugins.length})
+## Standalone Plugins (${plugins.length}, bundled in one archive)
 
-> If you already installed a Suite above, its plugins are bundled automatically. Use standalone packages when mixing and matching.
+> If you already installed a Suite above, its plugins are bundled automatically. For individual mix-and-match installs, download **[${pluginsBundle.assetName}](${pluginsBundle.downloadUrl})** (${fmtSize(pluginsBundle.bytes)}, unpacks to all ${plugins.length} \`.hyplugin\` packages):
 
-| Plugin | ID | Category | Platform | Size | Summary | Download |
-| :--- | :--- | :--- | :--- | ---: | :--- | :--- |
-${plugins.map((p) => `| **${p.titleEn}** | \`${p.id}\` | ${catEn[p.category] || p.category} | ${p.platform === 'cross-platform' ? 'Cross-platform' : 'macOS only'} | ${fmtSize(p.bytes)} | ${p.descEn} | [.hyplugin](${p.downloadUrl}) |`).join('\n')}
+| Plugin | File inside ZIP | Category | Platform | Size | Summary |
+| :--- | :--- | :--- | :--- | ---: | :--- |
+${plugins.map((p) => `| **${p.titleEn}** | \`${p.assetName}\` | ${catEn[p.category] || p.category} | ${p.platform === 'cross-platform' ? 'Cross-platform' : 'macOS only'} | ${fmtSize(p.bytes)} | ${p.descEn} |`).join('\n')}
 
 ---
 
